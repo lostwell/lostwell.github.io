@@ -78,6 +78,21 @@ const HeaderContainer = styled.div`
       transform: rotate(360deg);
     }
   }
+
+  
+  @media (max-width: 376px) {
+    transform: scale(0.45)!important;
+    &:hover{
+      transform: scale(0.55)!important;
+    }
+  }
+
+  @media (max-width: 768px) {
+    transform: scale(0.8);
+    &:hover{
+      transform: scale(1);
+    }
+  }
 `
 
 export {
