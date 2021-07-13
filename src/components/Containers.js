@@ -80,17 +80,31 @@ const HeaderContainer = styled.div`
   }
 
   
-  @media (max-width: 376px) {
-    transform: scale(0.45)!important;
+  @media (min-width: 0px) and (max-width: 321px){
+    transform: scale(0.35);
     &:hover{
-      transform: scale(0.55)!important;
+      transform: scale(0.45);
     }
   }
 
-  @media (max-width: 768px) {
-    transform: scale(0.8);
+  @media (min-width: 321px) and (max-width: 426px) {
+    transform: scale(0.45);
     &:hover{
-      transform: scale(1);
+      transform: scale(0.55);
+    }
+  }
+
+  @media (min-width: 426px) and (max-width: 767px) {
+    transform: scale(0.55);
+    &:hover{
+      transform: scale(0.65);
+    }
+  }
+
+  @media (min-width: 767px) and(max-width: 1023px) {
+    transform: scale(0.65);
+    &:hover{
+      transform: scale(0.75);
     }
   }
 `
