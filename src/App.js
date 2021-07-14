@@ -3,9 +3,9 @@ import { useSelector, useDispatch } from 'react-redux';
 import { selectTheme, toggleTheme } from './redux/reducers/theme/themeSlice'
 
 import { MainContainer, HeaderContainer } from './components/Containers'
-import Particles from './components/Particles';
 import { MainHeader } from './components/Headers'
 import ThemeToggle from './components/ThemeToggle';
+import Particles from './components/Particles';
 
 function App() {
   const theme = useSelector(selectTheme)

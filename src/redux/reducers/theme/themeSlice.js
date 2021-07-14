@@ -1,4 +1,12 @@
-const initialTheme = "light";
+import { DateTime } from 'luxon'
+
+const now = DateTime.now()
+const currentHour = now.hour
+const isDay = (currentHour >= 6 && currentHour <= 18)
+
+const initialTheme = isDay? "light" : "dark";
+
+
 const themeReducer = (theme = initialTheme, action) => {
   switch(action.type) {
     case 'theme/toggleTheme': 

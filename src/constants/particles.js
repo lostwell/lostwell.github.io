@@ -1,3 +1,6 @@
+import dandelion from '../resources/images/dandelion.svg'
+import star from '../resources/images/star.svg'
+
 const particlesConfig = {}
 
 particlesConfig.light = {
@@ -6,14 +9,14 @@ particlesConfig.light = {
       "value": 10,
       "density": {
         "enable": true,
-        "value_area": 1000
+        "value_area": 900
       }
     },
     "color": {
       "value": "#fffc33"
     },
     "shape": {
-      "type": "circle",
+      "type": "image",
       "stroke": {
         "width": 10,
         "color": "#303030"
@@ -22,9 +25,9 @@ particlesConfig.light = {
         "nb_sides": 5
       },
       "image": {
-        "src": "img/github.svg",
-        "width": 100,
-        "height": 100
+        "src": `${dandelion}`,
+        "width": 168,
+        "height": 182
       }
     },
     "opacity": {
@@ -38,12 +41,12 @@ particlesConfig.light = {
       }
     },
     "size": {
-      "value": 20,
+      "value": 50,
       "random": true,
       "anim": {
         "enable": false,
         "speed": 10,
-        "size_min": 0.1,
+        "size_min": 30,
         "sync": false
       }
     },
@@ -56,16 +59,16 @@ particlesConfig.light = {
     },
     "move": {
       "enable": true,
-      "speed": 5,
-      "direction": "random",
-      "random": true,
+      "speed": 6,
+      "direction": "right",
+      "random": false,
       "straight": false,
       "out_mode": "out",
-      "bounce": false,
+      "bounce": true,
       "attract": {
-        "enable": false,
-        "rotateX": 1000,
-        "rotateY": 1000
+        "enable": true,
+        "rotateX": 500,
+        "rotateY": 500
       }
     }
   },
@@ -73,12 +76,12 @@ particlesConfig.light = {
     "detect_on": "canvas",
     "events": {
       "onhover": {
-        "enable": true,
-        "mode": "bubble"
+        "enable": false,
+        "mode": "repulse"
       },
       "onclick": {
         "enable": false,
-        "mode": "bubble"
+        "mode": "repulse"
       },
       "resize": true
     },
@@ -97,8 +100,8 @@ particlesConfig.light = {
         "speed": 5
       },
       "repulse": {
-        "distance": 200,
-        "duration": 0.4
+        "distance": 150,
+        "duration": 2
       },
       "push": {
         "particles_nb": 4
@@ -124,7 +127,7 @@ particlesConfig.dark = {
       "value": "#fffc33"
     },
     "shape": {
-      "type": "circle",
+      "type": "image",
       "stroke": {
         "width": 0,
         "color": "#fffc33"
@@ -133,7 +136,7 @@ particlesConfig.dark = {
         "nb_sides": 5
       },
       "image": {
-        "src": "img/github.svg",
+        "src": `${star}`,
         "width": 100,
         "height": 100
       }
@@ -149,13 +152,13 @@ particlesConfig.dark = {
       }
     },
     "size": {
-      "value": 15,
+      "value": 25,
       "random": true,
       "anim": {
         "enable": false,
-        "speed": 10,
-        "size_min": 0.1,
-        "sync": false
+        "speed": 50,
+        "size_min": 10,
+        "sync": true
       }
     },
     "line_linked": {
@@ -167,7 +170,7 @@ particlesConfig.dark = {
     },
     "move": {
       "enable": true,
-      "speed": 5,
+      "speed": 3,
       "direction": "random",
       "random": true,
       "straight": false,
@@ -202,7 +205,7 @@ particlesConfig.dark = {
       },
       "bubble": {
         "distance": 200,
-        "size": 20,
+        "size": 40,
         "duration": 1,
         "opacity": 1,
         "speed": 5
