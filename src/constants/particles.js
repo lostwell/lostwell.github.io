@@ -1,15 +1,20 @@
-import dandelion from '../resources/images/dandelion.svg'
+import dandelionWhite from '../resources/images/dandelion-white.svg'
+import dandelionYellow from '../resources/images/dandelion-yellow.svg'
+import dandelionWhite2 from '../resources/images/dandelion-white-2.svg'
+import dandelionYellow2 from '../resources/images/dandelion-yellow-2.svg'
+
 import star from '../resources/images/star.svg'
+import starWhite from '../resources/images/star-white.svg'
 
 const particlesConfig = {}
 
 particlesConfig.light = {
   "particles": {
     "number": {
-      "value": 10,
+      "value": 20,
       "density": {
         "enable": true,
-        "value_area": 900
+        "value_area": 1000
       }
     },
     "color": {
@@ -24,11 +29,48 @@ particlesConfig.light = {
       "polygon": {
         "nb_sides": 5
       },
-      "image": {
-        "src": `${dandelion}`,
-        "width": 168,
-        "height": 182
-      }
+      "image": [
+        // {
+        //   "src": `${cloudDark}`,
+        //   "width": 589,
+        //   "height": 173
+        // },
+        // {
+        //   "src": `${cloudDarkBorder}`,
+        //   "width": 589,
+        //   "height": 173
+        // },
+        // {
+        //   "src": `${cloudLight}`,
+        //   "width": 589,
+        //   "height": 173
+        // },
+        // {
+        //   "src": `${cloudLightBorder}`,
+        //   "width": 589,
+        //   "height": 173
+        // },
+        {
+          "src": `${dandelionWhite}`,
+          "width": 168,
+          "height": 182
+        },
+        {
+          "src": `${dandelionYellow}`,
+          "width": 168,
+          "height": 182
+        },
+        {
+          "src": `${dandelionWhite2}`,
+          "width": 168,
+          "height": 182
+        },
+        {
+          "src": `${dandelionYellow2}`,
+          "width": 168,
+          "height": 182
+        },
+      ]
     },
     "opacity": {
       "value": 1,
@@ -60,13 +102,13 @@ particlesConfig.light = {
     "move": {
       "enable": true,
       "speed": 6,
-      "direction": "right",
+      "direction": "top-right",
       "random": false,
       "straight": false,
       "out_mode": "out",
-      "bounce": true,
+      "bounce": false,
       "attract": {
-        "enable": true,
+        "enable": false,
         "rotateX": 500,
         "rotateY": 500
       }
@@ -135,11 +177,18 @@ particlesConfig.dark = {
       "polygon": {
         "nb_sides": 5
       },
-      "image": {
-        "src": `${star}`,
-        "width": 100,
-        "height": 100
-      }
+      "image": [
+        {
+          "src": `${star}`,
+          "width": 100,
+          "height": 100
+        },
+        {
+          "src": `${starWhite}`,
+          "width": 100,
+          "height": 100
+        },
+      ]
     },
     "opacity": {
       "value": 1,
@@ -152,7 +201,7 @@ particlesConfig.dark = {
       }
     },
     "size": {
-      "value": 25,
+      "value": 20,
       "random": true,
       "anim": {
         "enable": false,
@@ -165,8 +214,8 @@ particlesConfig.dark = {
       "enable": true,
       "distance": 250,
       "color": "#fff",
-      "opacity": 1,
-      "width": 5
+      "opacity": 0.8,
+      "width": 4
     },
     "move": {
       "enable": true,
@@ -178,8 +227,8 @@ particlesConfig.dark = {
       "bounce": false,
       "attract": {
         "enable": false,
-        "rotateX": 1000,
-        "rotateY": 1000
+        "rotateX": 200,
+        "rotateY": 200
       }
     }
   },
@@ -205,7 +254,7 @@ particlesConfig.dark = {
       },
       "bubble": {
         "distance": 200,
-        "size": 40,
+        "size": 50,
         "duration": 1,
         "opacity": 1,
         "speed": 5
