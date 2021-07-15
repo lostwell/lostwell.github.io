@@ -1,7 +1,5 @@
 import dandelionWhite from '../resources/images/dandelion-white.svg'
-import dandelionYellow from '../resources/images/dandelion-yellow.svg'
 import dandelionWhite2 from '../resources/images/dandelion-white-2.svg'
-import dandelionYellow2 from '../resources/images/dandelion-yellow-2.svg'
 
 import star from '../resources/images/star.svg'
 import starWhite from '../resources/images/star-white.svg'
@@ -30,26 +28,6 @@ particlesConfig.light = {
         "nb_sides": 5
       },
       "image": [
-        // {
-        //   "src": `${cloudDark}`,
-        //   "width": 589,
-        //   "height": 173
-        // },
-        // {
-        //   "src": `${cloudDarkBorder}`,
-        //   "width": 589,
-        //   "height": 173
-        // },
-        // {
-        //   "src": `${cloudLight}`,
-        //   "width": 589,
-        //   "height": 173
-        // },
-        // {
-        //   "src": `${cloudLightBorder}`,
-        //   "width": 589,
-        //   "height": 173
-        // },
         {
           "src": `${dandelionWhite}`,
           "width": 72,
@@ -60,16 +38,6 @@ particlesConfig.light = {
           "width": 70,
           "height": 84
         },
-        // {
-        //   "src": `${dandelionYellow}`,
-        //   "width": 72,
-        //   "height": 84
-        // },
-        // {
-        //   "src": `${dandelionYellow2}`,
-        //   "width": 72,
-        //   "height": 84
-        // },
       ]
     },
     "opacity": {
@@ -110,10 +78,6 @@ particlesConfig.light = {
       "speed": 6,
       "direction": "top-right",
       "random": false,
-      // "random": {
-      //   "enable": true,
-      //   "minimumValue": 4
-      // },
       "straight": false,
       "out_mode": "out",
       "bounce": false,
