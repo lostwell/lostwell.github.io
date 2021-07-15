@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.f9d1ca91.chunk.css",
-    "main.js": "/static/js/main.bccdf764.chunk.js",
-    "main.js.map": "/static/js/main.bccdf764.chunk.js.map",
+    "main.js": "/static/js/main.2e7c3a3b.chunk.js",
+    "main.js.map": "/static/js/main.2e7c3a3b.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.4fc24854.js",
     "runtime-main.js.map": "/static/js/runtime-main.4fc24854.js.map",
     "static/js/2.67d02ee5.chunk.js": "/static/js/2.67d02ee5.chunk.js",
@@ -15,8 +15,6 @@
     "static/media/fonts.css": "/static/media/ExpletusSans-SemiBoldItalic.fad933c2.ttf",
     "static/media/dandelion-white-2.9dd11b27.svg": "/static/media/dandelion-white-2.9dd11b27.svg",
     "static/media/dandelion-white.8fdc72be.svg": "/static/media/dandelion-white.8fdc72be.svg",
-    "static/media/dandelion-yellow-2.e1f76849.svg": "/static/media/dandelion-yellow-2.e1f76849.svg",
-    "static/media/dandelion-yellow.81344a17.svg": "/static/media/dandelion-yellow.81344a17.svg",
     "static/media/star-white.dfa55959.svg": "/static/media/star-white.dfa55959.svg",
     "static/media/star.039f7c1d.svg": "/static/media/star.039f7c1d.svg"
   },
@@ -24,6 +22,6 @@
     "static/js/runtime-main.4fc24854.js",
     "static/js/2.67d02ee5.chunk.js",
     "static/css/main.f9d1ca91.chunk.css",
-    "static/js/main.bccdf764.chunk.js"
+    "static/js/main.2e7c3a3b.chunk.js"
   ]
 }
