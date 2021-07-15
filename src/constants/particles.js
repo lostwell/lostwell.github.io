@@ -52,44 +52,50 @@ particlesConfig.light = {
         // },
         {
           "src": `${dandelionWhite}`,
-          "width": 168,
-          "height": 182
-        },
-        {
-          "src": `${dandelionYellow}`,
-          "width": 168,
-          "height": 182
+          "width": 72,
+          "height": 84
         },
         {
           "src": `${dandelionWhite2}`,
-          "width": 168,
-          "height": 182
+          "width": 70,
+          "height": 84
         },
-        {
-          "src": `${dandelionYellow2}`,
-          "width": 168,
-          "height": 182
-        },
+        // {
+        //   "src": `${dandelionYellow}`,
+        //   "width": 72,
+        //   "height": 84
+        // },
+        // {
+        //   "src": `${dandelionYellow2}`,
+        //   "width": 72,
+        //   "height": 84
+        // },
       ]
     },
     "opacity": {
       "value": 1,
-      "random": false,
+      "random": {
+        "enable": true,
+        "minimumValue": 0.3
+      },
       "anim": {
         "enable": false,
-        "speed": 0.959040959040959,
-        "opacity_min": 0.1,
-        "sync": false
+        "speed": 0.2,
+        "opacity_min": 0.3,
+        "sync": true
       }
     },
     "size": {
       "value": 50,
-      "random": true,
+      "random": {
+        "enable": true,
+        "minimumValue": 20
+      },
       "anim": {
         "enable": false,
-        "speed": 10,
-        "size_min": 30,
-        "sync": false
+        "speed": 5,
+        "size_min": 15,
+        "sync": true
       }
     },
     "line_linked": {
@@ -104,6 +110,10 @@ particlesConfig.light = {
       "speed": 6,
       "direction": "top-right",
       "random": false,
+      // "random": {
+      //   "enable": true,
+      //   "minimumValue": 4
+      // },
       "straight": false,
       "out_mode": "out",
       "bounce": false,
@@ -202,11 +212,14 @@ particlesConfig.dark = {
     },
     "size": {
       "value": 20,
-      "random": true,
+      "random": {
+        "enable": true,
+        "minimumValue": 2
+      },
       "anim": {
         "enable": false,
-        "speed": 50,
-        "size_min": 10,
+        "speed": 30,
+        "size_min": 2,
         "sync": true
       }
     },
