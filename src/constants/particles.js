@@ -1,18 +1,25 @@
-import dandelionWhite from '../resources/images/dandelion-white.svg'
-import dandelionWhite2 from '../resources/images/dandelion-white-2.svg'
+import dandelionWhite from '../resources/images/icon/dandelion-white.svg'
+import dandelionWhite2 from '../resources/images/icon/dandelion-white-2.svg'
+import dandelionWhiteBorder from '../resources/images/icon/dandelion-white-border.png'
+import dandelionWhiteBorder2 from '../resources/images/icon/dandelion-white-border-2.png'
+// import dandelionYellow from '../resources/images/icon/dandelion-yellow.svg'
+// import dandelionYellow2 from '../resources/images/icon/dandelion-yellow-2.svg'
+// import spore1 from '../resources/images/icon/spore-1.svg'
+// import spore2 from '../resources/images/icon/spore-2.svg'
+// import spore3 from '../resources/images/icon/spore-3.svg'
 
-import star from '../resources/images/star.svg'
-import starWhite from '../resources/images/star-white.svg'
+import star from '../resources/images/icon/star.svg'
+import starWhite from '../resources/images/icon/star-white.svg'
 
 const particlesConfig = {}
 
 particlesConfig.light = {
   "particles": {
     "number": {
-      "value": 20,
+      "value": 10,
       "density": {
         "enable": true,
-        "value_area": 1000
+        "value_area": 800
       }
     },
     "color": {
@@ -28,22 +35,52 @@ particlesConfig.light = {
         "nb_sides": 5
       },
       "image": [
+        // {
+        //   "src": `${dandelionWhite}`,
+        //   "width": 72,
+        //   "height": 84
+        // },
+        // {
+        //   "src": `${dandelionWhite2}`,
+        //   "width": 70,
+        //   "height": 84
+        // },
         {
-          "src": `${dandelionWhite}`,
+          "src": `${dandelionWhiteBorder}`,
           "width": 72,
           "height": 84
         },
         {
-          "src": `${dandelionWhite2}`,
+          "src": `${dandelionWhiteBorder2}`,
           "width": 70,
           "height": 84
         },
+        // {
+        //   "src": `${dandelionYellow}`,
+        //   "width": 72,
+        //   "height": 84
+        // },
+        // {
+        //   "src": `${dandelionYellow2}`,
+        //   "width": 70,
+        //   "height": 84
+        // },
+        // {
+        //   "src": `${spore3}`,
+        //   "width": 32,
+        //   "height": 26
+        // },
+        // {
+        //   "src": `${spore2}`,
+        //   "width": 12,
+        //   "height": 12
+        // },
       ]
     },
     "opacity": {
       "value": 1,
       "random": {
-        "enable": true,
+        "enable": false,
         "minimumValue": 0.3
       },
       "anim": {
@@ -57,7 +94,7 @@ particlesConfig.light = {
       "value": 50,
       "random": {
         "enable": true,
-        "minimumValue": 20
+        "minimumValue": 30
       },
       "anim": {
         "enable": false,

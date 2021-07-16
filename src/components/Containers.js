@@ -9,10 +9,14 @@ const MainContainer = styled.div`
   z-index: 0;
   
   background-color: ${getThemeAccessor('background')};
+  background-image: ${getThemeAccessor('backgroundImage')};
+  background-position: ${getThemeAccessor('backgroundPosition')};
+  background-size: ${getThemeAccessor('backgroundSize')};
+  background-repeat: no-repeat;
 
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 `
 
@@ -32,15 +36,16 @@ const IconContainer = styled.span`
 `
 
 const HeaderContainer = styled.div`
+  background-color: ${getThemeAccessor('cardFill')};
   cursor: pointer;
-  margin: auto 0px;
-  border: 7px solid ${getThemeAccessor('borderStroke')};
+  border: 7px solid ${getThemeAccessor('cardStroke')};
   /* border-radius: 100%; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
+  position: fixed;
+  top: 25%;
   z-index: 0;
   /* background-color: ${getThemeAccessor('background')}; */
 
@@ -55,12 +60,12 @@ const HeaderContainer = styled.div`
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    /* border-bottom: 8px solid ${getThemeAccessor('borderStroke')}; */
+    /* border-bottom: 8px solid ${getThemeAccessor('cardStroke')}; */
   }
 
   .inner-line:first-of-type{
     padding: 25px 35px 10px 35px;
-    border-bottom: 3px solid ${getThemeAccessor('borderStroke')};
+    border-bottom: 3px solid ${getThemeAccessor('cardStroke')};
   }
 
   .inner-line:last-of-type{
