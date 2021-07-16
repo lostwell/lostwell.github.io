@@ -18,6 +18,27 @@ const MainContainer = styled.div`
   flex-direction: row;
   align-items: flex-start;
   justify-content: center;
+  transform-origin: 50% 100%;
+
+  @media (min-width: 0px) and (max-width: 321px){
+    background-position: ${getThemeAccessor('backgroundPositionSmall')};
+    background-size: ${getThemeAccessor('backgroundSizeSmall')};
+  }
+
+  @media (min-width: 321px) and (max-width: 426px){
+    background-position: ${getThemeAccessor('backgroundPositionMobile')};
+    background-size: ${getThemeAccessor('backgroundSizeMobile')};
+  }
+
+  @media (min-width: 426px) and (max-width: 769px){
+    background-position: ${getThemeAccessor('backgroundPositionTablet')};
+    background-size: ${getThemeAccessor('backgroundSizeTablet')};
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px){
+    background-position: ${getThemeAccessor('backgroundPositionLaptop')};
+    background-size: ${getThemeAccessor('backgroundSizeLaptop')};
+  }
 `
 
 const IconContainer = styled.span`
