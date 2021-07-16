@@ -1,15 +1,9 @@
-import dandelionWhite from '../resources/images/icon/dandelion-white.svg'
-import dandelionWhite2 from '../resources/images/icon/dandelion-white-2.svg'
 import dandelionWhiteBorder from '../resources/images/icon/dandelion-white-border.png'
 import dandelionWhiteBorder2 from '../resources/images/icon/dandelion-white-border-2.png'
-// import dandelionYellow from '../resources/images/icon/dandelion-yellow.svg'
-// import dandelionYellow2 from '../resources/images/icon/dandelion-yellow-2.svg'
-// import spore1 from '../resources/images/icon/spore-1.svg'
-// import spore2 from '../resources/images/icon/spore-2.svg'
-// import spore3 from '../resources/images/icon/spore-3.svg'
 
 import star from '../resources/images/icon/star.svg'
 import starWhite from '../resources/images/icon/star-white.svg'
+import starCyan from '../resources/images/icon/star-cyan.svg'
 
 const particlesConfig = {}
 
@@ -35,16 +29,6 @@ particlesConfig.light = {
         "nb_sides": 5
       },
       "image": [
-        // {
-        //   "src": `${dandelionWhite}`,
-        //   "width": 72,
-        //   "height": 84
-        // },
-        // {
-        //   "src": `${dandelionWhite2}`,
-        //   "width": 70,
-        //   "height": 84
-        // },
         {
           "src": `${dandelionWhiteBorder}`,
           "width": 72,
@@ -55,26 +39,6 @@ particlesConfig.light = {
           "width": 70,
           "height": 84
         },
-        // {
-        //   "src": `${dandelionYellow}`,
-        //   "width": 72,
-        //   "height": 84
-        // },
-        // {
-        //   "src": `${dandelionYellow2}`,
-        //   "width": 70,
-        //   "height": 84
-        // },
-        // {
-        //   "src": `${spore3}`,
-        //   "width": 32,
-        //   "height": 26
-        // },
-        // {
-        //   "src": `${spore2}`,
-        //   "width": 12,
-        //   "height": 12
-        // },
       ]
     },
     "opacity": {
@@ -196,6 +160,11 @@ particlesConfig.dark = {
         },
         {
           "src": `${starWhite}`,
+          "width": 100,
+          "height": 100
+        },
+        {
+          "src": `${starCyan}`,
           "width": 100,
           "height": 100
         },

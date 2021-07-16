@@ -65,7 +65,7 @@ const HeaderContainer = styled.div`
 
   .inner-line:first-of-type{
     padding: 25px 35px 10px 35px;
-    border-bottom: 3px solid ${getThemeAccessor('cardStroke')};
+    border-bottom: 3px solid ${getThemeAccessor('separatorFill')};
   }
 
   .inner-line:last-of-type{
