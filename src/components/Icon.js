@@ -21,4 +21,29 @@ const Icon = (props) => {
   return <StyledIcon {...newProps}/>
 }
 
-export default Icon
+const Logo = (props) => {
+  const theme = useSelector(selectTheme)
+  const logo = getThemeValue(theme, 'logo')
+
+  const StyledLogo = styled.div`
+    width: 70px;
+    height: 70px;
+    background-image: url(${logo});
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 20px;
+    display: inline;
+  `
+
+  const newProps = {
+    ...props,
+  }
+
+  return <StyledLogo {...newProps}/>
+}
+
+export { 
+  Icon,
+  Logo
+}

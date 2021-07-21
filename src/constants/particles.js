@@ -1,11 +1,132 @@
 import dandelionWhiteBorder from '../resources/images/icon/dandelion-white-border.png'
 import dandelionWhiteBorder2 from '../resources/images/icon/dandelion-white-border-2.png'
+import spore from '../resources/images/icon/spore.svg'
 
 import star from '../resources/images/icon/star.svg'
 import starWhite from '../resources/images/icon/star-white.svg'
 import starCyan from '../resources/images/icon/star-cyan.svg'
 
 const particlesConfig = {}
+
+
+particlesConfig.spore = {
+  "particles": {
+    "number": {
+      "value": 5,
+      "density": {
+        "enable": true,
+        "value_area": 800
+      }
+    },
+    "color": {
+      "value": "#fffc33"
+    },
+    "shape": {
+      "type": "image",
+      "stroke": {
+        "width": 10,
+        "color": "#303030"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": [
+        {
+          "src": `${spore}`,
+          "width": 50,
+          "height": 50
+        },
+      ]
+    },
+    "opacity": {
+      "value": 1,
+      "random": {
+        "enable": false,
+        "minimumValue": 0.3
+      },
+      "anim": {
+        "enable": false,
+        "speed": 0.2,
+        "opacity_min": 0.3,
+        "sync": true
+      }
+    },
+    "size": {
+      "value": 15,
+      "random": {
+        "enable": true,
+        "minimumValue":5
+      },
+      "anim": {
+        "enable": false,
+        "speed": 5,
+        "size_min": 15,
+        "sync": true
+      }
+    },
+    "line_linked": {
+      "enable": false,
+      "distance": 250,
+      "color": "#303030",
+      "opacity": 1,
+      "width": 5
+    },
+    "move": {
+      "enable": true,
+      "speed": 6,
+      "direction": "top-right",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 500,
+        "rotateY": 500
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": false,
+        "mode": "repulse"
+      },
+      "onclick": {
+        "enable": false,
+        "mode": "repulse"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 400,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 200,
+        "size": 30,
+        "duration": 1,
+        "opacity": 1,
+        "speed": 5
+      },
+      "repulse": {
+        "distance": 150,
+        "duration": 2
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+}
 
 particlesConfig.light = {
   "particles": {
@@ -55,10 +176,10 @@ particlesConfig.light = {
       }
     },
     "size": {
-      "value": 50,
+      "value": 40,
       "random": {
         "enable": true,
-        "minimumValue": 30
+        "minimumValue": 20
       },
       "anim": {
         "enable": false,
@@ -137,7 +258,7 @@ particlesConfig.dark = {
       "value": 15,
       "density": {
         "enable": true,
-        "value_area": 1000
+        "value_area": 1150
       }
     },
     "color": {
@@ -202,7 +323,7 @@ particlesConfig.dark = {
     },
     "move": {
       "enable": true,
-      "speed": 3,
+      "speed": 2,
       "direction": "random",
       "random": true,
       "straight": false,
@@ -237,7 +358,7 @@ particlesConfig.dark = {
       },
       "bubble": {
         "distance": 200,
-        "size": 50,
+        "size": 40,
         "duration": 1,
         "opacity": 1,
         "speed": 5

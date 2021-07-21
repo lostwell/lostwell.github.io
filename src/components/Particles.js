@@ -6,7 +6,9 @@ import { selectTheme } from '../redux/reducers/theme/themeSlice';
 
 const Particles = (props) => {
   const theme = useSelector(selectTheme)
-  const pConfig = particlesConfig[theme]
+  let pConfig = particlesConfig[theme]
+
+  if(props.config) pConfig =  particlesConfig[props.config]
 
   return (
     <ParticlesComponent 

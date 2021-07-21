@@ -1,20 +1,26 @@
 import particlesConfig from "./particles"
 import dandelionBackground from '../resources/images/background/dandelion-bg.png'
 import cloudBackground from '../resources/images/background/cloud-bg.svg'
+import lostwellLight from '../resources/images/icon/lostwell-light.svg'
+import lostwellDark from '../resources/images/icon/lostwell-dark.svg'
 
 const colors = {
   light: {
-    background: "#99f0da",
+    logo: `${lostwellLight}`,
+    background: "#B1EFDF",
     fontColor: "#303030",
+
     iconFill: '#fffc33',
     iconStroke: '#303030',
     cardStroke: '#303030',
     cardFill: 'rgba(255,255,255,1)',
     separatorFill: '#303030',
+    wrapperStroke: '#303030',
+
     particlesConfig: particlesConfig.light,
     backgroundImage: `url(${dandelionBackground})`,
 
-    backgroundPosition: "30% calc(100% + 180px)",
+    backgroundPosition: "30% calc(100% + 190px)",
     backgroundSize: "105%",
 
     backgroundPositionSmall: "23% calc(100% + 130px)",
@@ -29,14 +35,19 @@ const colors = {
     backgroundPositionLaptop: "25% calc(100% + 400px)",
     backgroundSizeLaptop: "400%",
   },
+  
   dark: {
+    logo: `${lostwellDark}`,
     background: "#303030",
     fontColor: "#fff",
+
     iconFill: '#fffc33',
     iconStroke: '#fffc33',
     cardStroke: 'transparent',
     cardFill: 'rgba(153,240,218,0.3)',
     separatorFill: '#fff',
+    wrapperStroke: 'rgba(153,240,218,0.3)',
+
     particlesConfig: particlesConfig.dark,
     backgroundImage: `url(${cloudBackground})`,
 

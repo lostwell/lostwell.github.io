@@ -1,4 +1,4 @@
-import Icon from "./Icon"
+import { Icon } from "./Icon"
 // import { useSelector, useDispatch } from "react-redux"
 // import { selectTheme, toggleTheme } from "../redux/reducers/theme/themeSlice"
 import { useSelector } from "react-redux"
@@ -16,7 +16,7 @@ const ThemeToggle = (props) => {
     ...props,
   }
 
-  const resolveSize = (condition) => condition? 80 : 0
+  const resolveSize = (condition) => condition? "1.6em" : "0"
   
   return (
     <IconContainer className="theme-toggle" theme={theme} {...newProps}>

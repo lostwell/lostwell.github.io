@@ -7,6 +7,10 @@ const MainHeader = styled.h1`
   font-weight: 600;
   color: ${getThemeAccessor('fontColor')};
   /* text-shadow: 0px 5px 0px ${getThemeAccessor('iconFill')}; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 12px;
 `
 
 export {
