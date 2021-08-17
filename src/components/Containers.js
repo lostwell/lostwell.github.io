@@ -56,8 +56,8 @@ const IconContainer = styled.span`
   position: fixed;
   top: 1.5em;
 
-  &:hover{
-    transform: rotate(360deg);
+  &.disabled, &.disabled > *{
+    cursor: wait;
   }
 
   @media (min-width: 0px) and (max-width: 321px){
@@ -99,6 +99,7 @@ const HeaderContainer = styled.div`
   align-items: center;
   position: relative;
   z-index: 0;
+  overflow: hidden;
   /* background-color: ${getThemeAccessor('background')}; */
 
   .theme-toggle{

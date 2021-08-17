@@ -17,7 +17,7 @@ const HeaderWrapper = styled.div`
   position: fixed;
   top: 20%;
   display: flex;
-  border: 2px solid ${getThemeAccessor('wrapperStroke')}; 
+  /* border: 2px solid ${getThemeAccessor('wrapperStroke')};  */
   padding: 5px;
 
   /* &:hover{

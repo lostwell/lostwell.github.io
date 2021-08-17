@@ -4,4 +4,8 @@ const getThemeValue = (theme, property, object = colors) => object[theme][proper
 
 const getThemeAccessor = (property, object = colors) => (props) => getThemeValue(props.theme, property, object)
 
-export { getThemeAccessor, getThemeValue }
+const vhToPixel = value => `${(window.innerHeight * value) / 100}px`
+
+const vwToPixel = value => `${(window.innerWidth * value) / 100}px`
+
+export { getThemeAccessor, getThemeValue, vhToPixel, vwToPixel }

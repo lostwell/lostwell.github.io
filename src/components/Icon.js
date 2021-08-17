@@ -32,8 +32,7 @@ const Logo = (props) => {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    margin-left: 20px;
-    display: inline;
+    display: inline-block;
   `
 
   const newProps = {
