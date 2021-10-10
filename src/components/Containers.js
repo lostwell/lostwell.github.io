@@ -117,13 +117,27 @@ const HeaderContainer = styled.div`
   }
 
   .inner-line:first-of-type{
-    padding: 18px 35px 17px 35px;
+    padding: 18px 35px 19px 35px;
     border-bottom: 3px solid ${getThemeAccessor('separatorFill')};
   }
 
   .inner-line:last-of-type{
-    padding: 20px 30px 20px 30px;
+    padding: 20px 40px 20px 40px;
     color: ${getThemeAccessor('fontColor')};
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    div{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      svg{
+        margin-right: 6px;
+      }
+    }
   }
 `
 

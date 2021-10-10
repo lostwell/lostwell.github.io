@@ -6,10 +6,11 @@ const MainHeader = styled.h1`
   line-height: 1em;
   font-weight: 600;
   color: ${getThemeAccessor('fontColor')};
-  /* text-shadow: 0px 5px 0px ${getThemeAccessor('iconFill')}; */
+  /* text-shadow: -6px 0 0 ${getThemeAccessor('iconFill')}; */
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
   margin-top: 12px;
 `
 

@@ -15,14 +15,14 @@ const ThemeToggle = (props) => {
     // transform: "rotate(0deg)",
     // loop: { reverse: true },
     config: { friction: 5 },
-    reverse: theme == "light"? false : true,
+    reverse: theme === "light"? false : true,
   }))
   const MoonIcon = (props) => <Icon icon="moon" {...props}/>
   const SunIcon = (props) => <Icon icon="sun" {...props}/>
 
   const newProps = {
     onClick: () => { 
-      if(toggleState == 'enabled'){
+      if(toggleState === 'enabled'){
         animate({
           from: { rotate: 0, scale: 0.3 },
           to: { rotate: 720, scale: 1 },
@@ -41,7 +41,7 @@ const ThemeToggle = (props) => {
   
   return (
     <AnimatedIcon
-      className={classNames("theme-toggle", {disabled: toggleState == 'disabled'? true: false})}
+      className={classNames("theme-toggle", {disabled: toggleState === 'disabled'? true: false})}
       theme={theme}
       style={styles}
       onClick={newProps.onClick}

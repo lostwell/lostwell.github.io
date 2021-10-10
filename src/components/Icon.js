@@ -6,10 +6,7 @@ import styled from 'styled-components'
 
 const Icon = (props) => {
   const theme = useSelector(selectTheme)
-  const StyledIcon = styled(FeatherIcon)`
-    cursor: pointer;
-    transition: 0.4s;
-  `
+  const StyledIcon = FeatherIcon
 
   const newProps = {
     size: 24,

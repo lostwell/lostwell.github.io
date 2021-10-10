@@ -145,13 +145,42 @@ let MainPage = (props)=>{
   return (
     <AnimatedHeader theme={theme} style={cardWrapper}>
       <AnimatedContainer theme={theme} style={cardContainer}>
-        <AnimatedThemeIcon style={themeIcon} icon={`${theme == 'light'? 'sun' : 'moon'}`}/>
+        <AnimatedThemeIcon style={themeIcon} icon={`${theme === 'light'? 'sun' : 'moon'}`}/>
         <animated.div className="inner-line" style={divider}>
           <MainHeader theme={theme}>Lostwell</MainHeader>
-          <Logo style={{marginLeft: '10px'}}/>
+          <Logo style={{marginLeft: '20px'}}/>
         </animated.div>
         <animated.div className="inner-line" style={info}>
-          Louel Lagasca <br></br> Front-End Developer &amp; Designer <br></br> louellagasca@gmail.com
+          <div>
+            <Icon 
+              icon="user" 
+              size={15}
+              fill={'transparent'} 
+              stroke={getThemeValue(theme, 'fontColor')}
+              {...{strokeWidth: 3}}
+            /> 
+            Louel Lagasca
+          </div>
+          <div>
+            <Icon
+              icon="briefcase"
+              size={15}
+              fill={'transparent'} 
+              stroke={getThemeValue(theme, 'fontColor')}
+              {...{strokeWidth: 2}}
+            />
+            Front-End Developer &amp; Designer
+          </div>
+          <div>
+            <Icon
+              icon="mail"
+              size={15}
+              fill={'transparent'} 
+              stroke={getThemeValue(theme, 'fontColor')}
+              {...{strokeWidth: 2}}
+            />
+              louellagasca@gmail.com
+          </div>
         </animated.div>
       </AnimatedContainer>
     </AnimatedHeader>
