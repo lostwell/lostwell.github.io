@@ -1,12 +1,12 @@
-import { Icon } from "./Icon"
-// import { useSelector, useDispatch } from "react-redux"
-// import { selectTheme, toggleTheme } from "../redux/reducers/theme/themeSlice"
-import { useSelector } from "react-redux"
-import { selectTheme } from "../redux/reducers/theme/themeSlice"
-import { selectToggleState } from "../redux/reducers/theme/toggleStateSlice"
-import { IconContainer } from "./Containers"
-import { useSpring, animated, config } from '@react-spring/web'
-import classNames from 'classnames'
+
+import { useSelector } from "react-redux";
+import { useSpring, animated, config } from '@react-spring/web';
+import classNames from 'classnames';
+
+import Icon from "../Icon";
+import { IconContainer } from "../Containers";
+import { selectTheme } from "../../redux/reducers/theme/themeSlice";
+import { selectToggleState } from "../../redux/reducers/theme/toggleStateSlice";
 
 const ThemeToggle = (props) => {
   const theme = useSelector(selectTheme)

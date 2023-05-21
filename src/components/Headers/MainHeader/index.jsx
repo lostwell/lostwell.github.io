@@ -1,12 +1,12 @@
 import styled from 'styled-components'
-import { getThemeAccessor } from './utils/utils'
+import { theme } from '../../Utils';
 
 const MainHeader = styled.h1`
   font-size: 5.5em;
   line-height: 1em;
   font-weight: 600;
-  color: ${getThemeAccessor('fontColor')};
-  /* text-shadow: -6px 0 0 ${getThemeAccessor('iconFill')}; */
+  color: ${theme('fontColor')};
+  /* text-shadow: -6px 0 0 ${theme('iconFill')}; */
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -14,6 +14,4 @@ const MainHeader = styled.h1`
   margin-top: 12px;
 `
 
-export {
-  MainHeader
-}
+export default MainHeader;

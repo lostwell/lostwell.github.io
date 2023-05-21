@@ -1,8 +1,8 @@
 import ParticlesComponent from 'react-particles-js';
-import particlesConfig from '../constants/particles';
-
 import { useSelector } from 'react-redux';
-import { selectTheme } from '../redux/reducers/theme/themeSlice';
+
+import particlesConfig from '../../constants/particles';
+import { selectTheme } from '../../redux/reducers/theme/themeSlice';
 
 const Particles = (props) => {
   const theme = useSelector(selectTheme)

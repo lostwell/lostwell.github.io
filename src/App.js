@@ -1,17 +1,17 @@
-import './App.css';
 import { useSelector, useDispatch } from 'react-redux';
-import { selectTheme, toggleTheme } from './redux/reducers/theme/themeSlice'
-import { selectToggleState, setToggleState } from './redux/reducers/theme/toggleStateSlice';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
 
-import { MainPage } from './routes/MainPage';
+import { MainPage } from './routes';
 import { MainContainer } from './components/Containers'
 import ThemeToggle from './components/ThemeToggle';
 import Particles from './components/Particles';
+import { selectTheme, toggleTheme } from './redux/reducers/theme/themeSlice'
+import { selectToggleState, setToggleState } from './redux/reducers/theme/toggleStateSlice';
+import './App.css';
 
 function App() {
   const theme = useSelector(selectTheme)
