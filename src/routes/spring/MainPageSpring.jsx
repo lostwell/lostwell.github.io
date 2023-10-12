@@ -36,7 +36,6 @@ const useHeader = (component, theme) => {
       },
     ],
     onRest: (result, controller) => {
-      console.log({result, controller})
       controller.stop()
       dispatch(setToggleState('enabled'))
     }

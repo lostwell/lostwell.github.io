@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { theme } from '../../Utils';
+import { theme } from '../Utils';
 
 let HeaderContainer = styled.div`
   /* cursor: pointer; */

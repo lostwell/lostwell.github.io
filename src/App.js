@@ -27,24 +27,28 @@ function App() {
   return (
     <Router>
       <MainContainer className="main-container" theme={theme}>
-        <Particles 
-          style={{ position: "fixed", zIndex: -1, top: "0", left: "0", width: "100%", height: "100%" }}
-          className={"test-canvas"}
-        />
-        { theme === 'light' && 
-          <Particles 
-            style={{ position: "fixed", zIndex: -1, top: "0", left: "0", width: "100%", height: "100%"  }}
-            className={"test-canvas"}
-            config="spore"
-          />
-        }
-
         <Switch>
           <Route path="/">
+            <Particles 
+              id="main-particles"
+              width="100%"
+              height="100%"
+              style={{ position: "fixed", zIndex: -1, top: "0", left: "0"}}
+              className={"test-canvas"}
+            />
+            { theme === 'light' && 
+              <Particles 
+                id="supp-particles"
+                width="100%"
+                height="100%"
+                style={{ position: "fixed", zIndex: -1, top: "0", left: "0"}}
+                className={"test-canvas"}
+                config="spore"
+              />
+            }
             <MainPage theme={theme} toggleState={toggleState}/>
           </Route>
         </Switch>
-
         <ThemeToggle onClick={onToggleClick}/>
       </MainContainer>
     </Router>

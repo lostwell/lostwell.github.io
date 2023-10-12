@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { theme } from '../../Utils';
-import media from './media';
+import { theme } from '../Utils';
+import media from './media/IconContainerMedia';
 
 let IconContainer = styled.span`
   cursor: pointer;

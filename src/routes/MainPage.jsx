@@ -1,19 +1,19 @@
 import React from 'react';
 import { animated } from '@react-spring/web';
 
-import { HeaderWrapper } from '../../components';
-import { HeaderContainer } from '../../components'
-import { MainHeader } from '../../components'
-import { Logo } from '../../components';
-import { Icon } from "../../components"
-import { themeValue } from '../../components/Utils';
+import { HeaderWrapper } from '../components';
+import { HeaderContainer } from '../components'
+import { MainHeader } from '../components'
+import { Logo } from '../components';
+import { Icon } from "../components"
+import { themeValue } from '../components/Utils';
 import {
   useHeader,
   useContainer,
   useInfo,
   useDivider,
   useThemeIcon,
-} from './spring';
+} from './spring/MainPageSpring';
 
 
 let MainPage = (props) => {

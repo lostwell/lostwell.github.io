@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { theme } from '../../Utils';
+import { theme } from '../Utils';
 
 const MainHeader = styled.h1`
   font-size: 5.5em;

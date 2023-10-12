@@ -90,7 +90,7 @@ particlesConfig.spore = {
     "detect_on": "canvas",
     "events": {
       "onhover": {
-        "enable": false,
+        "enable": true,
         "mode": "repulse"
       },
       "onclick": {
@@ -114,7 +114,7 @@ particlesConfig.spore = {
         "speed": 5
       },
       "repulse": {
-        "distance": 150,
+        "distance": 100,
         "duration": 2
       },
       "push": {
@@ -214,7 +214,7 @@ particlesConfig.light = {
     "detect_on": "canvas",
     "events": {
       "onhover": {
-        "enable": false,
+        "enable": true,
         "mode": "repulse"
       },
       "onclick": {
@@ -238,7 +238,7 @@ particlesConfig.light = {
         "speed": 5
       },
       "repulse": {
-        "distance": 150,
+        "distance": 100,
         "duration": 2
       },
       "push": {
@@ -340,7 +340,7 @@ particlesConfig.dark = {
     "detect_on": "canvas",
     "events": {
       "onhover": {
-        "enable": true,
+        "enable": false,
         "mode": "bubble"
       },
       "onclick": {
@@ -368,10 +368,10 @@ particlesConfig.dark = {
         "duration": 0.4
       },
       "push": {
-        "particles_nb": 4
+        "particles_nb": 1
       },
       "remove": {
-        "particles_nb": 2
+        "particles_nb": 1
       }
     }
   },

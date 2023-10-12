@@ -15,7 +15,7 @@ const colors = {
     cardStroke: '#303030',
     cardFill: 'rgba(255,255,255,1)',
     separatorFill: '#303030',
-    wrapperStroke: '#303030',
+    wrapperStroke: 'rgba(48,48,48,1)',
 
     particlesConfig: particlesConfig.light,
     backgroundImage: `url(${dandelionBackground})`,
