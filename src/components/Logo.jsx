@@ -1,12 +1,12 @@
-import { useSelector } from 'react-redux';
 import styled from 'styled-components';
+import { useSelector } from 'react-redux';
 
-import { themeValue } from '../Utils';
-import { selectTheme } from '../../redux/reducers/theme/themeSlice';
+import { themeValue } from './Utils';
+import { selectTheme } from '../redux/reducers/theme/themeSlice';
 
 const Logo = (props) => {
-  const theme = useSelector(selectTheme)
-  const logo = themeValue(theme, 'logo')
+  const theme = useSelector(selectTheme);
+  const logo = themeValue(theme, 'logo');
 
   const StyledLogo = styled.div`
     width: 70px;

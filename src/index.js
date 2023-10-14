@@ -5,6 +5,7 @@ import store from './redux/store'
 
 import './index.css';
 import './fonts.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import App from './App';
 import reportWebVitals from './reportWebVitals';

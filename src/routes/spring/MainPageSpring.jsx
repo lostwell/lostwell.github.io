@@ -21,16 +21,16 @@ const useHeader = (component, theme) => {
     },
     to: [
       {
-        top: `${vhToPixel(30)}`,
+        top: `${vhToPixel(33)}`,
         width: `150px`,
         height: `150px`,
-        border: `1px solid transparent`,
+        border: `2px solid transparent`,
         borderRadius: '100%',
       },
       {
-        top: `${vhToPixel(20)}`,
-        width: '541px',
-        height: '270px',
+        top: `${vhToPixel(23)}`,
+        width: '550px',
+        height: '280px',
         border: `2px solid ${themeValue(theme, 'wrapperStroke')}`,
         borderRadius: '0%',
       },
@@ -57,12 +57,12 @@ const useContainer = (component, theme) => {
     },
     to: [
       {
-        border: `6px solid ${themeValue(theme, 'cardStroke')}`,
+        border: `5px solid ${themeValue(theme, 'cardStroke')}`,
         borderRadius: '100%',
       },
       {
         borderRadius: '0%',
-        border: `7px solid ${themeValue(theme, 'cardStroke')}`,
+        border: `5px solid ${themeValue(theme, 'cardStroke')}`,
       },
     ]
   });
@@ -119,7 +119,7 @@ const useDivider = (component, theme) => {
         x: `${vwToPixel(0)}`,
         y: `${vwToPixel(0)}`,
         opacity: 1,
-        borderBottom: `3px solid ${themeValue(theme, 'separatorFill')}`,
+        borderBottom: `2px solid ${themeValue(theme, 'separatorFill')}`,
       },
     ]
   });
@@ -143,7 +143,7 @@ const useThemeIcon = (component) => {
     to: [
       {
         opacity: 1,
-        top: `${vhToPixel(5)}`,
+        top: `${vhToPixel(3.5)}`,
         rotate: 720,
       },
       {

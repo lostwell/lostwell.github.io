@@ -5,11 +5,12 @@ import {
   Route,
 } from "react-router-dom";
 
-import { MainPage } from './routes';
-import { MainContainer } from './components/Containers'
-import ThemeToggle from './components/ThemeToggle';
+import Navbar from './components/Navbar';
 import Particles from './components/Particles';
-import { selectTheme, toggleTheme } from './redux/reducers/theme/themeSlice'
+import { MainContainer } from './components';
+import { MainPage } from './routes';
+import { AppContainer } from './components/Containers';
+import { selectTheme, toggleTheme } from './redux/reducers/theme/themeSlice';
 import { selectToggleState, setToggleState } from './redux/reducers/theme/toggleStateSlice';
 import './App.css';
 
@@ -26,31 +27,33 @@ function App() {
 
   return (
     <Router>
-      <MainContainer className="main-container" theme={theme}>
-        <Switch>
-          <Route path="/">
+      <AppContainer>
+        <MainContainer className="main-container" theme={theme}>
+          <Particles 
+            id="main-particles"
+            width="100%"
+            height="100%"
+            style={{ position: "fixed", zIndex: -1, top: "0", left: "0"}}
+            className={"test-canvas"}
+          />
+          { theme === 'light' && 
             <Particles 
-              id="main-particles"
+              id="supp-particles"
               width="100%"
               height="100%"
               style={{ position: "fixed", zIndex: -1, top: "0", left: "0"}}
               className={"test-canvas"}
+              config="spore"
             />
-            { theme === 'light' && 
-              <Particles 
-                id="supp-particles"
-                width="100%"
-                height="100%"
-                style={{ position: "fixed", zIndex: -1, top: "0", left: "0"}}
-                className={"test-canvas"}
-                config="spore"
-              />
-            }
-            <MainPage theme={theme} toggleState={toggleState}/>
-          </Route>
-        </Switch>
-        <ThemeToggle onClick={onToggleClick}/>
-      </MainContainer>
+          }
+          <Switch>
+            <Route path="/">
+              <MainPage theme={theme} toggleState={toggleState}/>
+            </Route>
+          </Switch>
+          <Navbar onToggleClick={onToggleClick}/>
+        </MainContainer>
+      </AppContainer>
     </Router>
   );
 }

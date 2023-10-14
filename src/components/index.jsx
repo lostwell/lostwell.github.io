@@ -1,4 +1,5 @@
 export { 
+  AppContainer,
   MainContainer,
   IconContainer,
   HeaderContainer

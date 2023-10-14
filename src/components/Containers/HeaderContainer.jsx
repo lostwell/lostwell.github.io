@@ -14,6 +14,8 @@ let HeaderContainer = styled.div`
   position: relative;
   z-index: 0;
   overflow: hidden;
+  backdrop-filter: blur(5px);
+  box-shadow: ${theme('boxShadows')};
   /* background-color: ${theme('background')}; */
 
   .theme-toggle{
@@ -31,7 +33,7 @@ let HeaderContainer = styled.div`
   }
 
   .inner-line:first-of-type{
-    padding: 18px 35px 19px 35px;
+    padding: 20px 35px 20px 35px;
     border-bottom: 3px solid ${theme('separatorFill')};
   }
 

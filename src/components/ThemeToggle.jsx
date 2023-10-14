@@ -3,18 +3,16 @@ import { useSelector } from "react-redux";
 import { useSpring, animated, config } from '@react-spring/web';
 import classNames from 'classnames';
 
-import Icon from "../Icon";
-import { IconContainer } from "../Containers";
-import { selectTheme } from "../../redux/reducers/theme/themeSlice";
-import { selectToggleState } from "../../redux/reducers/theme/toggleStateSlice";
+import Icon from "./Icon";
+import { IconContainer } from "./Containers";
+import { selectTheme } from "../redux/reducers/theme/themeSlice";
+import { selectToggleState } from "../redux/reducers/theme/toggleStateSlice";
 
 const ThemeToggle = (props) => {
   const { slow } = config;
   const theme = useSelector(selectTheme)
   const toggleState = useSelector(selectToggleState)
-  const [styles, animate] = useSpring(()=>({ 
-    // transform: "rotate(0deg)",
-    // loop: { reverse: true },
+  const [styles, animate] = useSpring(()=>({
     config: { friction: 5 },
     reverse: theme === "light"? false : true,
   }))
@@ -36,7 +34,7 @@ const ThemeToggle = (props) => {
   }
 
   const AnimatedIcon = animated(IconContainer)
-  const resolveSize = (condition) => condition? "1.6em" : "0"
+  const resolveSize = (condition) => condition? "1.5em" : "0"
   
   return (
     <AnimatedIcon

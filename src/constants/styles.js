@@ -9,13 +9,22 @@ const colors = {
     logo: `${lostwellLight}`,
     background: "#B1EFDF",
     fontColor: "#303030",
+    accentColor: '#D1D027',
 
     iconFill: '#fffc33',
     iconStroke: '#303030',
     cardStroke: '#303030',
-    cardFill: 'rgba(255,255,255,1)',
+    cardFill: 'rgba(255,255,255,0.65)',
+    cardFillOpaque: '#e9f9f4',
     separatorFill: '#303030',
     wrapperStroke: 'rgba(48,48,48,1)',
+    boxShadows: `
+      0 1px 1px rgba(128, 193, 177, 0.2),
+      0 2px 2px rgba(128, 193, 177, 0.2),
+      0 4px 4px rgba(128, 193, 177, 0.2),
+      0 8px 8px rgba(128, 193, 177, 0.2),
+      0 16px 16px rgba(128, 193, 177, 0.2)
+    `,
 
     particlesConfig: particlesConfig.light,
     backgroundImage: `url(${dandelionBackground})`,
@@ -38,15 +47,24 @@ const colors = {
   
   dark: {
     logo: `${lostwellDark}`,
-    background: "#303030",
+    background: "#354742",
     fontColor: "#fff",
+    accentColor: '#fffb70',
 
     iconFill: '#fffc33',
     iconStroke: '#fffc33',
     cardStroke: 'transparent',
-    cardFill: 'rgba(153,240,218,0.3)',
+    cardFill: 'rgba(177,239,223,0.4)',
+    cardFillOpaque: '#6e8981',
     separatorFill: '#fff',
-    wrapperStroke: 'rgba(153,240,218,0.3)',
+    wrapperStroke: 'rgba(177,239,223,0)',
+    boxShadows: `
+      0 1px 1px rgba(192, 242, 229, 0.05),
+      0 2px 2px rgba(192, 242, 229, 0.05),
+      0 4px 4px rgba(192, 242, 229, 0.05),
+      0 8px 8px rgba(192, 242, 229, 0.05),
+      0 16px 16px rgba(192, 242, 229, 0.05)
+    `,
 
     particlesConfig: particlesConfig.dark,
     backgroundImage: `url(${cloudBackground})`,

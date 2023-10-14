@@ -90,7 +90,7 @@ particlesConfig.spore = {
     "detect_on": "canvas",
     "events": {
       "onhover": {
-        "enable": true,
+        "enable": false,
         "mode": "repulse"
       },
       "onclick": {
@@ -214,7 +214,7 @@ particlesConfig.light = {
     "detect_on": "canvas",
     "events": {
       "onhover": {
-        "enable": true,
+        "enable": false,
         "mode": "repulse"
       },
       "onclick": {

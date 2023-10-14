@@ -3,8 +3,8 @@ import { loadSlim } from "tsparticles-slim";
 import { useCallback } from "react";
 import { useSelector } from 'react-redux';
 
-import particlesConfig from '../../constants/particles';
-import { selectTheme } from '../../redux/reducers/theme/themeSlice';
+import particlesConfig from '../constants/particles';
+import { selectTheme } from '../redux/reducers/theme/themeSlice';
 
 const ParticlesComponent = (props) => {
   const theme = useSelector(selectTheme)
