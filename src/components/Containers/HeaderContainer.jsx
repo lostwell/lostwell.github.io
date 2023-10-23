@@ -2,11 +2,9 @@ import styled from 'styled-components';
 import { theme } from '../Utils';
 
 let HeaderContainer = styled.div`
-  /* cursor: pointer; */
   font-size: 1em;
   background-color: ${theme('cardFill')};
   border: 7px solid ${theme('cardStroke')};
-  /* border-radius: 100%; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -16,7 +14,6 @@ let HeaderContainer = styled.div`
   overflow: hidden;
   backdrop-filter: blur(5px);
   box-shadow: ${theme('boxShadows')};
-  /* background-color: ${theme('background')}; */
 
   .theme-toggle{
     margin: 0 0 0 20px;
@@ -29,7 +26,6 @@ let HeaderContainer = styled.div`
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    /* border-bottom: 8px solid ${theme('cardStroke')}; */
   }
 
   .inner-line:first-of-type{

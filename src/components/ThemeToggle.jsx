@@ -10,17 +10,17 @@ import { selectToggleState } from "../redux/reducers/theme/toggleStateSlice";
 
 const ThemeToggle = (props) => {
   const { slow } = config;
-  const theme = useSelector(selectTheme)
-  const toggleState = useSelector(selectToggleState)
+  const theme = useSelector(selectTheme);
+  const toggleState = useSelector(selectToggleState);
   const [styles, animate] = useSpring(()=>({
     config: { friction: 5 },
     reverse: theme === "light"? false : true,
-  }))
+  }));
   const MoonIcon = (props) => <Icon icon="moon" {...props}/>
   const SunIcon = (props) => <Icon icon="sun" {...props}/>
 
   const newProps = {
-    onClick: () => { 
+    onClick: () => {       
       if(toggleState === 'enabled'){
         animate({
           config: {...slow},
@@ -31,10 +31,10 @@ const ThemeToggle = (props) => {
       props.onClick()
     },
     style: {...styles},
-  }
+  };
 
-  const AnimatedIcon = animated(IconContainer)
-  const resolveSize = (condition) => condition? "1.5em" : "0"
+  const AnimatedIcon = animated(IconContainer);
+  const resolveSize = (condition) => condition? "1.5em" : "0";
   
   return (
     <AnimatedIcon
@@ -45,7 +45,7 @@ const ThemeToggle = (props) => {
       <MoonIcon size={resolveSize(theme === 'dark')}/>
       <SunIcon size={resolveSize(theme === 'light')}/>
     </AnimatedIcon>
-  )
+  );
 }
 
-export default ThemeToggle
+export default ThemeToggle;

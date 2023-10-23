@@ -20,6 +20,7 @@ let MainContainer = styled.div`
   align-items: flex-start;
   justify-content: center;
   transform-origin: 50% 100%;
+  overflow: hidden;
 `;
 
 MainContainer = media(MainContainer);

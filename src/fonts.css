@@ -25,3 +25,17 @@
   font-weight: bold;
   font-style: italic;
 }
+
+@font-face {
+  font-family: 'Lobster';
+  src: url("./resources/fonts/Lobster/Lobster-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Staatlitches';
+  src: url("./resources/fonts/Staatlitches/Staatliches-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}

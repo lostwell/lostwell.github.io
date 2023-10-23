@@ -8,7 +8,7 @@ import {
 import Navbar from './components/Navbar';
 import Particles from './components/Particles';
 import { MainContainer } from './components';
-import { MainPage } from './routes';
+import { MainPage, OverviewPage, ExperiencePage, EducationPage } from './routes';
 import { AppContainer } from './components/Containers';
 import { selectTheme, toggleTheme } from './redux/reducers/theme/themeSlice';
 import { selectToggleState, setToggleState } from './redux/reducers/theme/toggleStateSlice';
@@ -27,8 +27,8 @@ function App() {
 
   return (
     <Router>
-      <AppContainer>
-        <MainContainer className="main-container" theme={theme}>
+      <AppContainer id="app-container">
+        <MainContainer id="main-container" theme={theme}>
           <Particles 
             id="main-particles"
             width="100%"
@@ -47,8 +47,17 @@ function App() {
             />
           }
           <Switch>
-            <Route path="/">
+            <Route exact path="/">
               <MainPage theme={theme} toggleState={toggleState}/>
+            </Route>
+            <Route path="/overview">
+              <OverviewPage theme={theme} toggleState={toggleState}/>
+            </Route>
+            <Route path="/experience">
+              <ExperiencePage theme={theme} toggleState={toggleState}/>
+            </Route>
+            <Route path="/education">
+              <EducationPage theme={theme} toggleState={toggleState}/>
             </Route>
           </Switch>
           <Navbar onToggleClick={onToggleClick}/>

@@ -18,7 +18,6 @@ import {
 
 let MainPage = (props) => {
   const theme = props.theme
-  const accentColor = themeValue(theme, 'accentColor');
 
   const [AnimatedHeader, headerSpring] = useHeader(HeaderWrapper, theme);
   const [AnimatedContainer, containerSpring] = useContainer(HeaderContainer, theme);
@@ -59,7 +58,10 @@ let MainPage = (props) => {
               rel="noreferrer"
               href="mailto:louellagasca@gmail.com"
               target="_blank"
-              style={{color: accentColor}}
+              style={{
+                color: themeValue(theme, 'mailColor'),
+                fontWeight: 'bold'
+              }}
             >
               <div>
                 <Icon

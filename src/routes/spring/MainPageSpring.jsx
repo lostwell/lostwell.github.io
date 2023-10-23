@@ -29,7 +29,7 @@ const useHeader = (component, theme) => {
       },
       {
         top: `${vhToPixel(23)}`,
-        width: '550px',
+        width: '538px',
         height: '280px',
         border: `2px solid ${themeValue(theme, 'wrapperStroke')}`,
         borderRadius: '0%',
@@ -84,7 +84,7 @@ const useInfo = (component) => {
       {
         x: `${vwToPixel(-11)}`,
         y: `${vwToPixel(51)}`,
-        opacity: 0.0001,
+        opacity: 0,
       },
       {
         x: `${vwToPixel(0)}`,
@@ -112,7 +112,7 @@ const useDivider = (component, theme) => {
       {
         x: `${vwToPixel(-11)}`,
         y: `${vwToPixel(51)}`,
-        opacity: 0.0001,
+        opacity: 0,
         borderBottom: `2px solid ${themeValue(theme, 'cardFill')}`,
       },
       {
@@ -133,23 +133,26 @@ const useThemeIcon = (component) => {
   const spring = useSpring({
     config: config.slow,
     from: {
-      width: `${vwToPixel(7)}`,
+      width: `${vhToPixel(7)}`,
       height: `${vhToPixel(7)}`,
       position: 'absolute',
       opacity: 0,
       top: `${vhToPixel(45)}`,
       rotate: 0,
+      scale: 0,
     },
     to: [
       {
         opacity: 1,
         top: `${vhToPixel(3.5)}`,
         rotate: 720,
+        scale: 1,
       },
       {
         top: `${vhToPixel(-60)}`,
         opacity: 0,
         rotate: 0,
+        scale: 0,
       },
     ]
   });
