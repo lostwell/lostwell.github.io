@@ -31,9 +31,9 @@ const colors = {
     iconFill: '#fffc33',
     iconStroke: '#303030',
     cardStroke: '#303030',
-    cardFill: 'rgba(250,250,250,0.6)',
+    cardFill: 'rgb(240,252,249, 0.6)',
     cardFillOpaque: '#fafefc',
-    highlightFill: 'rgba(255,255,255,0.7)',
+    highlightFill: 'rgb(240,252,249, 0.8)',
     separatorFill: '#303030',
     wrapperStroke: 'rgba(48,48,48,1)',
     boxShadows: `
