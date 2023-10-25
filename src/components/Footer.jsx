@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Container from 'react-bootstrap/Container';
 
 import Logo from './Logo';
-import { Icon } from "../components"
+import { Icon, InView } from "../components"
 import { theme, themeValue } from '../components/Utils';
 
 const Footer = (props) => {
@@ -12,49 +12,53 @@ const Footer = (props) => {
   return (
     <FooterContainer theme={theme}>
       <Container className="footer-container">
-        <Brand theme={theme}>
-          <div>Lostwell</div>
-          <Logo style={{margin: '-5px 0 0 10px', width: '35px', height: '35px'}}/>
-        </Brand>
-        <div className="footer-details-container">
-          <div>
-            <Icon 
-              icon="user" 
-              size={15}
-              fill={'transparent'} 
-              stroke={themeValue(theme, 'fontColor')}
-              {...{strokeWidth: 3}}
-            /> 
-            Louel Lagasca
-          </div>
-          <div>
-            <Icon
-              icon="briefcase"
-              size={15}
-              fill={'transparent'} 
-              stroke={themeValue(theme, 'fontColor')}
-              {...{strokeWidth: 2}}
-            />
-            Front-End Developer &amp; Designer
-          </div>
-          <a
-            rel="noreferrer"
-            href="mailto:louellagasca@gmail.com"
-            target="_blank"
-            style={{color: mailColor}}
-          >
+        <InView>
+          <Brand theme={theme}>
+            <div>Lostwell</div>
+            <Logo style={{margin: '-5px 0 0 10px', width: '35px', height: '35px'}}/>
+          </Brand>
+        </InView>
+        <InView>
+          <div className="footer-details-container">
+            <div>
+              <Icon 
+                icon="user" 
+                size={15}
+                fill={'transparent'} 
+                stroke={themeValue(theme, 'fontColor')}
+                {...{strokeWidth: 3}}
+              /> 
+              Louel Lagasca
+            </div>
             <div>
               <Icon
-                icon="mail"
+                icon="briefcase"
                 size={15}
                 fill={'transparent'} 
                 stroke={themeValue(theme, 'fontColor')}
                 {...{strokeWidth: 2}}
               />
-                louellagasca@gmail.com
+              Front-End Developer &amp; Designer
             </div>
-          </a>
-        </div>
+            <a
+              rel="noreferrer"
+              href="mailto:louellagasca@gmail.com"
+              target="_blank"
+              style={{color: mailColor}}
+            >
+              <div>
+                <Icon
+                  icon="mail"
+                  size={15}
+                  fill={'transparent'} 
+                  stroke={themeValue(theme, 'fontColor')}
+                  {...{strokeWidth: 2}}
+                />
+                  louellagasca@gmail.com
+              </div>
+            </a>
+          </div>
+        </InView>
       </Container>
     </FooterContainer>
   );

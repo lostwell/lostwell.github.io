@@ -4,6 +4,7 @@ import { images } from "../constants/gallery";
 
 import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css";
+import { InView } from "./Springs";
 
 const Gallery = (props) => {
   const [index, setIndex] = useState(-1);
@@ -26,6 +27,8 @@ const Gallery = (props) => {
         onClick={handleClick}
         enableImageSelection={false}
         margin={3}
+        thumbnailImageComponent={ImageComponent}
+        tagStyle={{display: 'none'}}
       />
       {!!currentImage && (
         <Lightbox
@@ -47,3 +50,9 @@ const Gallery = (props) => {
 };
 
 export default Gallery;
+
+const ImageComponent = (props) => {
+  return <InView>
+    <img alt={props.imageProps.alt} {...props.imageProps} />
+  </InView>;
+}

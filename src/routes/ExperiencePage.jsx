@@ -6,7 +6,7 @@ import { Timeline, Event } from "react-timeline-scribble";
 import ContentPage from './ContentPage';
 // import {} from './spring/ExperiencePageSpring';
 import ContentPageHeader from '../components/Headers/ContentPageHeader';
-import { TimelineContainer } from '../components';
+import { InView, TimelineContainer } from '../components';
 
 const ExperiencePage = (props) => {
 
@@ -14,60 +14,18 @@ const ExperiencePage = (props) => {
     <ContentPage theme={props.theme} feature="experience">
       <CustomContainer theme={props.theme}>
         <CustomPageHeader theme={props.theme}>
-          <h2>Work Experience</h2>
-          <h3>Louel Lagasca</h3>
+          <InView><h2>Work Experience</h2></InView>
+          <InView><h3>Louel Lagasca</h3></InView>
         </CustomPageHeader>
-        <TimelineContainer theme={props.theme}>
-          <Timeline>
-            <Event
-              interval={"March 2022 – Present"}
-              title={"UI/UX Developer"}
-              subtitle={"Codev by Zylun Philippines Inc. – Makati City, Philippines"}
-            >
-              <ul className="details">
-                <li>Handles a client’s enterprise network system for supply chain management.</li>
-                <li>Develops and maintains web apps built with React, Mobx, and ExtJS.</li>
-                <li>Develops and troubleshoots pages, reports, forms, widgets, and dashboards.</li>
-                <li>Creates test coverage and documentation for project components.</li>
-              </ul>
-            </Event>
-            <Event
-              interval={"June 2021 – March 2022"}
-              title={"Front-End Developer"}
-              subtitle={"Whitecloak Technologies, Inc. – Pasig City, Philippines"}
-            >
-              <ul className="details">
-                <li>Handled a client’s corporate banking and system management web applications.</li>
-                <li>Developed and maintained web apps built with React, Redux, and Redux-Saga.</li>
-                <li>Developed features for rendering and managing bank documents.</li>
-                <li>Coordinated with multiple teams for testing, QA, and troubleshooting of APIs.</li>
-              </ul>
-            </Event>
-            <Event
-              interval={"February 2020 – June 2021"}
-              title={"Web Developer"}
-              subtitle={"Dottystyle Creative Co. – Makati City, Philippines"}
-            >
-              <ul className="details">
-                <li>Handled a client’s engagement administration and analytics web application.</li>
-                <li>Developed and maintained React, Redux, and jQuery-based web apps.</li>
-                <li>Interpreted client needs and designed mockups for new pages and features.</li>
-                <li>Implemented WordPress, React web sites from concept to deployment.</li>
-                <li>Implemented charting libraries for data analytics and visualization features.</li>
-              </ul>
-            </Event>
-            <Event
-              interval={"June 2019 – August 2019"}
-              title={"Technical Content Creator (Internship)"}
-              subtitle={"Nokia Manila Technology Center – Quezon City, Philippines"}
-            >
-              <ul className="details">
-                <li>Created and migrated technical manuals to XML using DITA guidelines.</li>
-                <li>Led a small internship team to develop an automated peer evaluation web app.</li>
-              </ul>
-            </Event>
-          </Timeline>
-        </TimelineContainer>
+        <InView>
+          <TimelineContainer theme={props.theme}>
+            <InView>
+              <Timeline>
+                {eventData.map((props) => <EventView {...props} />)}
+              </Timeline>
+            </InView>
+          </TimelineContainer>
+        </InView>
       </CustomContainer>
     </ContentPage>
   );
@@ -100,3 +58,63 @@ const CustomPageHeader = styled(ContentPageHeader)`
   justify-content: center;
   align-items: center;
 `;
+
+const EventView = ({interval, title, subtitle, details}) => {
+  return <InView>
+    <Event
+      interval={interval}
+      title={title}
+      subtitle={subtitle}
+    >
+      <ul className="details">
+        {details.map((item) => <InView><li>{item}</li></InView>)}
+      </ul>
+    </Event>
+  </InView>;
+}
+
+const eventData = [
+  {
+    interval: "March 2022 – Present",
+    title: "UI/UX Developer",
+    subtitle: "Codev by Zylun Philippines Inc. – Makati City, Philippines",
+    details: [
+      'Handles a client’s enterprise network system for supply chain management.',
+      'Develops and maintains web apps built with React, Mobx, and ExtJS.',
+      'Develops and troubleshoots pages, reports, forms, widgets, and dashboards.',
+      'Creates test coverage and documentation for project components.',
+    ]
+  },
+  {
+    interval: "June 2021 – March 2022",
+    title: "Front-End Developer",
+    subtitle: "Whitecloak Technologies, Inc. – Pasig City, Philippines",
+    details: [
+      'Handled a client’s corporate banking and system management web applications.',
+      'Developed and maintained web apps built with React, Redux, and Redux-Saga.',
+      'Developed features for rendering and managing bank documents.',
+      'Coordinated with multiple teams for testing, QA, and troubleshooting of APIs.',
+    ]
+  },
+  {
+    interval: "February 2020 – June 2021",
+    title: "Web Developer",
+    subtitle: "Dottystyle Creative Co. – Makati City, Philippines",
+    details: [
+      'Handled a client’s engagement administration and analytics web application.',
+      'Developed and maintained React, Redux, and jQuery-based web apps.',
+      'Interpreted client needs and designed mockups for new pages and features.',
+      'Implemented WordPress, React web sites from concept to deployment.',
+      'Implemented charting libraries for data analytics and visualization features.',
+    ]
+  },
+  {
+    interval: "June 2019 – August 2019",
+    title: "Technical Content Creator (Internship)",
+    subtitle: "Nokia Manila Technology Center – Quezon City, Philippines",
+    details: [
+      'Created and migrated technical manuals to XML using DITA guidelines.',
+      'Led a small internship team to develop an automated peer evaluation web app.',
+    ]
+  },
+];

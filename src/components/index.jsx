@@ -26,3 +26,8 @@ export {
   HeaderWrapper,
   PageContentWrapper
 } from './Wrappers';
+
+export { 
+  Trail,
+  InView,
+} from './Springs';

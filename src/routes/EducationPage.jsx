@@ -10,7 +10,7 @@ import ContentPage from './ContentPage';
 // import {} from './spring/EducationPageSpring';
 import { theme } from '../components/Utils';
 import ContentPageHeader from '../components/Headers/ContentPageHeader';
-import { TimelineContainer } from '../components';
+import { InView, TimelineContainer } from '../components';
 import { Gallery } from '../components';
 
 const EducationPage = (props) => {
@@ -18,30 +18,20 @@ const EducationPage = (props) => {
     <ContentPage theme={props.theme} feature="education">
       <CustomContainer theme={props.theme}>
         <CustomPageHeader theme={props.theme}>
-          <h2>Saint Louis University</h2>
-          <h3>Baguio Philippines</h3>
+          <InView><h2>Saint Louis University</h2></InView>
+          <InView><h3>Baguio Philippines</h3></InView>
         </CustomPageHeader>
         <Row>
           <Col>
             <TimelineContainer theme={props.theme}>
               <Timeline>
-                <Event
-                  interval={"2015 – 2019"}
-                  title={"Bachelor of Science Major in Computer Science"}
-                  subtitle={"Saint Louis University (SLU) – Baguio City, Philippines"}
-                >
-                  <ul className="details">
-                    <li>Excelled in programming, development, and design coursework.</li>
-                    <li>Public Relations Officer for the organization: Integrated Confederacy (ICON).</li>
-                    <li>Created publication materials and administered events which helped increase organization visibility.</li>
-                  </ul>
-                </Event>
+                {eventData.map((props) => <EventView {...props} />)}
               </Timeline>
             </TimelineContainer>
           </Col>
         </Row>
         <ContentContainer theme={props.theme}>
-          <h5>Sample Coursework & Publications</h5>
+          <InView><h5>Sample Coursework & Publications</h5></InView>
           <Col className='gallery-container'>
             <Gallery />
           </Col>
@@ -110,3 +100,30 @@ const CustomPageHeader = styled(ContentPageHeader)`
   justify-content: center;
   align-items: center;
 `;
+
+const EventView = ({interval, title, subtitle, details}) => {
+  return <InView>
+    <Event
+      interval={interval}
+      title={title}
+      subtitle={subtitle}
+    >
+      <ul className="details">
+        {details.map((item) => <InView><li>{item}</li></InView>)}
+      </ul>
+    </Event>
+  </InView>;
+}
+
+const eventData = [
+  {
+    interval: "2015 – 2019",
+    title: "Bachelor of Science Major in Computer Science",
+    subtitle: "Saint Louis University (SLU) – Baguio City, Philippines",
+    details: [
+      'Excelled in programming, development, and design coursework.',
+      'Public Relations Officer for the organization: Integrated Confederacy (ICON).',
+      'Created publication materials and administered events which helped increase organization visibility.',
+    ]
+  },
+];
