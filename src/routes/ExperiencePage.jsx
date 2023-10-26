@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import { Timeline, Event } from "react-timeline-scribble";
 
 import ContentPage from './ContentPage';
-// import {} from './spring/ExperiencePageSpring';
 import ContentPageHeader from '../components/Headers/ContentPageHeader';
 import { InView, TimelineContainer } from '../components';
 

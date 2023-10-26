@@ -7,9 +7,8 @@ import { Timeline, Event } from "react-timeline-scribble";
 import "react-image-lightbox/style.css";
 
 import ContentPage from './ContentPage';
-// import {} from './spring/EducationPageSpring';
-import { theme } from '../components/Utils';
 import ContentPageHeader from '../components/Headers/ContentPageHeader';
+import { theme } from '../components/Utils';
 import { InView, TimelineContainer } from '../components';
 import { Gallery } from '../components';
 
@@ -33,7 +32,7 @@ const EducationPage = (props) => {
         <ContentContainer theme={props.theme}>
           <InView><h5>Sample Coursework & Publications</h5></InView>
           <Col className='gallery-container'>
-            <Gallery />
+            <Gallery theme={props.theme} />
           </Col>
         </ContentContainer>
       </CustomContainer>

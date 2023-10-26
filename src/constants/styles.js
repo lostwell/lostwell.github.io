@@ -15,6 +15,7 @@ import experienceDark from '../resources/images/featured/experience-dark.png';
 import educationLight from '../resources/images/featured/education-light.png';
 import educationDark from '../resources/images/featured/education-dark.png';
 import profile from '../resources/images/featured/Profile.png';
+import profileMin from '../resources/images/featured/Profile-min.png';
 
 const colors = {
   light: {
@@ -27,6 +28,7 @@ const colors = {
     progressBar: "#7a988f",
     progress: "#bfeddf",
     mailColor: '#8ebfb2',
+    imageFill: 'rgb(240,252,249, 1)',
 
     iconFill: '#fffc33',
     iconStroke: '#303030',
@@ -66,6 +68,7 @@ const colors = {
     experience: `${experienceLight}`,
     education: `${educationLight}`,
     profile: `${profile}`,
+    profileMin: `${profileMin}`,
   },
   
   dark: {
@@ -76,8 +79,9 @@ const colors = {
     accentColor: '#354742',
     backdropBlur: 'blur(10px)',
     progressBar: "#b3cec2",
-    progress: "#1f2422",
+    progress: "#354742",
     mailColor: '#fffb70',
+    imageFill: 'rgba(160,182,174,0.5)',
 
     iconFill: '#fffc33',
     iconStroke: '#fffc33',
@@ -117,6 +121,7 @@ const colors = {
     experience: `${experienceDark}`,
     education: `${educationDark}`,
     profile: `${profile}`,
+    profileMin: `${profileMin}`,
   }
 }
 

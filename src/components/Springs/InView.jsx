@@ -1,6 +1,6 @@
 import { useInView, animated } from '@react-spring/web'
 
-const InView = ({delay, config, args, children}) => {
+const InView = ({delay, config, args, children, className}) => {
   const [ref, springs] = useInView(
     () => ({
       from: {
@@ -20,7 +20,7 @@ const InView = ({delay, config, args, children}) => {
   );
 
   return (
-    <animated.div ref={ref} style={springs}>
+    <animated.div ref={ref} style={springs} className={className}>
       {children}
     </animated.div>
   );

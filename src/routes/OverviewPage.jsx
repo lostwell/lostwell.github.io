@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import ListGroup from 'react-bootstrap/ListGroup';
 import ProgressBar from 'react-bootstrap/ProgressBar';
+import Spinner from 'react-bootstrap/Spinner';
 
 import ContentPage from './ContentPage';
-import { theme } from '../components/Utils';
 import ContentPageHeader from '../components/Headers/ContentPageHeader';
+import { theme, themeValue } from '../components/Utils';
 import { InView } from '../components';
 
 const OverviewPage = (props) => {
@@ -18,7 +19,7 @@ const OverviewPage = (props) => {
       <ContentContainer>
         <Row>
           <Col>
-              <InView><Profile theme={props.theme}/></InView>
+              <Profile theme={props.theme}/>
           </Col>
           <Col lg={7} xl={8}>
             <ContentPageHeader theme={props.theme}>
@@ -64,20 +65,33 @@ export default OverviewPage;
 
 
 const Profile = (props) => {
-  return <StyledProfileWrapper theme={props.theme}>
-    <StyledProfile theme={props.theme}/>
-  </StyledProfileWrapper>;
+  const [hasLoaded, setHasLoaded] = useState(false);
+
+  return <InView><StyledProfileWrapper theme={props.theme}>
+      {!hasLoaded && <SpinnerContainer theme={props.theme}><Spinner animation="border" /></SpinnerContainer>}
+      <StyledProfile
+        theme={props.theme}
+        alt="Louel Lagasca"
+        className={hasLoaded? '' : 'hidden'}
+        src={themeValue(props.theme, 'profile')}
+        onLoad={() => setHasLoaded(true)}
+      />
+    
+  </StyledProfileWrapper></InView>;
 };
 
 const StyledProfileWrapper = styled.div`
   width: fit-content;
   height: fit-content;
-  display: flex;
   border: 5px solid ${theme('cardStroke')};
   background-color: ${theme('highlightFill')};
   border-radius: 10px;
   padding: 20px;
   margin: 0 20px auto auto;
+
+  .hidden{
+    display: none;
+  }
 
   @media (max-width: 1230px) {
     padding: 15px;
@@ -95,15 +109,41 @@ const StyledProfileWrapper = styled.div`
   }
 `;
 
-const StyledProfile = styled.div`
+const StyledProfile = styled.img`
   width: 240px;
   height: 240px;
-  background-image: url(${theme('profile')});
+  display: block;
+  border-radius: 10px;
+
+  @media (max-width: 1325px) {
+    width: 200px;
+    height: 200px;
+  }
+
+  @media (max-width: 1000px) {
+    width: 200px;
+    height: 200px;
+  }
+
+  @media (max-width: 500px) {
+    width: 140px;
+    height: 140px;
+  }
+`;
+
+const SpinnerContainer = styled.div`
+  width: 240px;
+  height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: ${theme('imageFill')};
+  background-image: url(${theme('profileMin')});
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  display: block;
   border-radius: 10px;
+  color: ${theme('cardFillOpaque')};
 
   @media (max-width: 1325px) {
     width: 200px;
