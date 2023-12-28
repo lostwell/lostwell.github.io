@@ -61,6 +61,7 @@ const ContentContainer = styled(Row)`
     border-radius: 20px;
     padding: 40px 40px;
     background-color: ${theme('highlightFill')};
+    backdrop-filter: ${theme('highlightBackdropBlur')};
   }
 `;
 

@@ -53,16 +53,4 @@ const ContentContainer = styled(Col)`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-
-  @media (max-width: 1230px) {
-    top: 20;
-  }
-
-  @media (max-width: 1000px) {
-    top: 10;
-  }
-  
-  @media (max-width: 500px) {
-    top: 5;
-  }
 `;

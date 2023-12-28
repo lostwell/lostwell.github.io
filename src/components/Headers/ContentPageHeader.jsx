@@ -26,6 +26,7 @@ const ContentPageHeader = styled.div`
     letter-spacing: 20px;
     text-indent: 5px;
     background-color: ${theme('highlightFill')};
+    backdrop-filter: ${theme('highlightBackdropBlur')};
     border-radius: 50px;
     padding: 5px 5px 5px 20px;
   }

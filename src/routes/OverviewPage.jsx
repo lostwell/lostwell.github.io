@@ -85,6 +85,7 @@ const StyledProfileWrapper = styled.div`
   height: fit-content;
   border: 5px solid ${theme('cardStroke')};
   background-color: ${theme('highlightFill')};
+    backdrop-filter: ${theme('highlightBackdropBlur')};
   border-radius: 10px;
   padding: 20px;
   margin: 0 20px auto auto;
@@ -162,21 +163,21 @@ const SpinnerContainer = styled.div`
 `;
 
 const ContentContainer = styled(Container)`
-  margin-top: 120px;
+  margin-top: 100px;
   padding: 0 40px;
 
   @media (max-width: 1250px) {
-    margin-top: 80px;
+    margin-top: 50px;
     padding: 0 40px;
   }
 
   @media (max-width: 990px) {
-    margin-top: 40px;
+    margin-top: 10px;
     padding: 0 30px;
   }
 
   @media (max-width: 500px) {
-    margin-top: 40px;
+    margin-top: 5px;
     padding: 0 30px;
   }
 `;
@@ -213,6 +214,7 @@ const CustomRow = styled(Row)`
 
   & .skill-list {
     margin-bottom: 40px;
+    backdrop-filter: ${theme('highlightBackdropBlur')};
   }
   
   @media (max-width: 1250px) {

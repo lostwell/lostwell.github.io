@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 let PageContainer = styled.div`
   width: 100%;
-  height: 100%;
+  height: calc(100% - 80px);
   font-size: 1em;
   display: flex;
   flex-direction: column;
@@ -11,6 +11,7 @@ let PageContainer = styled.div`
   position: fixed;
   z-index: 0;
   overflow: hidden auto;
+  top: 80px;
 `;
 
 export default PageContainer;

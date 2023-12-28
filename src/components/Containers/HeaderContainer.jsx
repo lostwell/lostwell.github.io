@@ -3,7 +3,7 @@ import { theme } from '../Utils';
 
 let HeaderContainer = styled.div`
   font-size: 1em;
-  background-color: ${theme('cardFill')};
+  background-color: ${theme('highlightFill')};
   border: 7px solid ${theme('cardStroke')};
   display: flex;
   flex-direction: column;
@@ -12,7 +12,7 @@ let HeaderContainer = styled.div`
   position: relative;
   z-index: 0;
   overflow: hidden;
-  backdrop-filter: blur(5px);
+  backdrop-filter: ${theme('highlightBackdropBlur')};
   box-shadow: ${theme('boxShadows')};
 
   .theme-toggle{

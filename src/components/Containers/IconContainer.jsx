@@ -11,7 +11,7 @@ let IconContainer = styled.span`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: ${theme('cardFill')};
+  background-color: ${theme('highlightFill')};
   padding: 6px 6px;
   width: fit-content;
   height: fit-content;

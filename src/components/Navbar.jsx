@@ -19,8 +19,8 @@ const NavbarComponent = ({onToggleClick}) => {
         <Navbar.Brand>
           <Home to="/">
               <Brand theme={theme}>
-                <div>Lostwell</div>
-                <Logo style={{margin: '-5px 0 0 10px', width: '35px', height: '35px'}}/>
+                <div id='lostwell-text'>Lostwell</div>
+                <Logo id='lostwell-logo'/>
               </Brand>
           </Home>
         </Navbar.Brand>
@@ -72,8 +72,13 @@ const NavbarStyled = styled(Navbar)`
   box-shadow: ${getTheme('boxShadows')};
   border-bottom: 3px solid ${getTheme('cardStroke')};
 
+  /* @media (max-width: 990px){
+    background-color: ${getTheme('highlightFill')};
+    backdrop-filter: ${getTheme('highlightBackdropBlur')};
+  } */
+
   & .navbar-nav{
-    @media (max-width: 992px){
+    @media (max-width: 990px){
       height: 95vh;
       margin-top: 12px;
 
@@ -93,6 +98,10 @@ const NavbarStyled = styled(Navbar)`
         background-color: ${getTheme('highlightFill')};
       }
     }
+  }
+
+  .navbar-toggler {
+    background-color: ${getTheme('highlightFill')};
   }
 `;
 
@@ -128,7 +137,7 @@ const Controls = styled(Nav)`
   justify-content: flex-end;
   margin: 5px 0 0 0;
 
-  @media (max-width: 992px){
+  @media (max-width: 990px){
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -161,11 +170,31 @@ const Route = styled(NavLink)`
     background-color: ${getTheme('fontColor')};
   }
 
-  @media (max-width: 992px){
+  @media (max-width: 990px){
     margin: 20px 0;
   }
 `;
 
 const Home = styled(Link)`
   text-decoration: none;
+
+  & #lostwell-logo {
+    margin: -5px 0 0 10px;
+    width: 40px;
+    height: 35px;
+
+    @media (max-width: 575px){
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  & #lostwell-text {
+    font-size: 1em;
+
+    @media (max-width: 575px){
+      font-size: 0.85em;
+      margin-left: 5px;
+    }
+  }
 `;

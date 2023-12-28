@@ -18,9 +18,9 @@ const Featured = (props) => {
 export default Featured;
 
 const StyledFeatured = styled.div`
-  top: 60px;
+  top: 0px;
   width: 1048px;
-  height: 705px;
+  height: 600px;
   background-image: url(${(props) => theme(props.featured)});
   background-size: cover;
   background-position: center;
@@ -29,7 +29,7 @@ const StyledFeatured = styled.div`
   position: relative;
 
   @media (max-width: 1024px) {
-    top: 60px;
+    top: 20px;
     width: 798px;
     height: 569px;
   }
@@ -40,7 +40,7 @@ const StyledFeatured = styled.div`
   }
 
   @media (max-width: 500px) {
-    top: 150px;
+    top: 100px;
     width: 588px;
     height: 359px;
   }

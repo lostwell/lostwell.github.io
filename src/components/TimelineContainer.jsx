@@ -6,7 +6,8 @@ const TimelineContainer = styled.div`
   height: 'fit-content';
   padding: 50px 20px;
   border-radius: 20px;
-  background-color: ${theme('cardFill')};
+  background-color: ${theme('highlightFill')};
+  backdrop-filter: ${theme('highlightBackdropBlur')};
   margin-top: 30px;
 
   & .details{

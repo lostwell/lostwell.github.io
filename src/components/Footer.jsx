@@ -74,7 +74,7 @@ const FooterContainer = styled.div`
   background-color: ${theme('cardFill')};
   color: ${theme('fontColor')};
   position: relative;
-  margin-top: 250px;
+  margin-top: 50px;
   padding: 60px 30px 30px 30px;
   padding-bottom: 0;
   backdrop-filter: ${theme('backdropBlur')};
@@ -87,6 +87,7 @@ const FooterContainer = styled.div`
     align-items: center;
     padding: 40px 30px;
     border-radius: 20px 20px 0 0;
+    backdrop-filter: ${theme('highlightBackdropBlur')};
     background-color: ${theme('highlightFill')};
     border-top: 3px solid ${theme('cardStroke')};
     border-left: 3px solid ${theme('cardStroke')};

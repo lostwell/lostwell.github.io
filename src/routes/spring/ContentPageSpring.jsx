@@ -16,7 +16,7 @@ const useWrapper = (component, theme) => {
     },
     to: [
       {
-        top: `${vhToPixel(15)}`,
+        top: `${vhToPixel(2)}`,
       },
     ],
     onRest: (result, controller) => {
@@ -62,7 +62,7 @@ const useContent = (component, theme) => {
     to: [
       {
         opacity: 1,
-        marginTop: `${vhToPixel(70)}`,
+        marginTop: `${vhToPixel(80)}`,
       },
       {
         opacity: 1,
