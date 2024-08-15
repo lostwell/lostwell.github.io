@@ -122,7 +122,7 @@ const eventData = [
     subtitle: "Saint Louis University (SLU) – Baguio City, Philippines",
     details: [
       'Excelled in programming, development, and design coursework.',
-      'Public Relations Officer for the organization: Integrated Confederacy (ICON).',
+      'Public Relations Officer for Integrated Confederacy (ICON), an organization for Information Technology and Computer Science students.',
       'Created publication materials and administered events which helped increase organization visibility.',
     ]
   },

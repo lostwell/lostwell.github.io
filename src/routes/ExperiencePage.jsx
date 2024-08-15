@@ -75,13 +75,16 @@ const EventView = ({interval, title, subtitle, details}) => {
 const eventData = [
   {
     interval: "March 2022 – Present",
-    title: "UI/UX Developer",
+    title: "UI/UX Developer - Senior UI/UX Developer",
     subtitle: "Codev by Zylun Philippines Inc. – Makati City, Philippines",
     details: [
       'Handles a client’s enterprise network system for supply chain management.',
       'Develops and maintains web apps built with React, Mobx, and ExtJS.',
       'Develops and troubleshoots pages, reports, forms, widgets, and dashboards.',
-      'Creates test coverage and documentation for project components.',
+      'Conceptualizes and implements functional requirements into scalable and reusable project components.', 
+      'Provides test coverage and documentation for new and legacy components.',
+      'Provides support and assistance to fellow colleagues in areas of expertise.',
+      'Collaborates with other teams, departments, and QA for technical support.',
     ]
   },
   {
@@ -92,6 +95,7 @@ const eventData = [
       'Handled a client’s corporate banking and system management web applications.',
       'Developed and maintained web apps built with React, Redux, and Redux-Saga.',
       'Developed features for rendering and managing bank documents.',
+      'Troubleshoots project components to comply with responsive web design.',
       'Coordinated with multiple teams for testing, QA, and troubleshooting of APIs.',
     ]
   },
@@ -105,6 +109,7 @@ const eventData = [
       'Interpreted client needs and designed mockups for new pages and features.',
       'Implemented WordPress, React web sites from concept to deployment.',
       'Implemented charting libraries for data analytics and visualization features.',
+      'Implemented web animation libraries for developing banners and automated email responses.',
     ]
   },
   {

@@ -23,7 +23,7 @@ const OverviewPage = (props) => {
           </Col>
           <Col lg={7} xl={8}>
             <ContentPageHeader theme={props.theme}>
-              <InView><h2>Front-end Developer</h2></InView>
+              <InView><h2>Senior Front-end Developer</h2></InView>
               <InView><h3>Louel Lagasca</h3></InView>
               <InView><p>
                 A creative and quality-oriented developer who is proficient at designing and developing 
@@ -251,10 +251,11 @@ const devSkillData = [
   { label: 'Bootstrap', progress: 100 },
   { label: 'DC/D3 JS', progress: 80 },
   { label: 'React Spring', progress: 80 },
+  { label: 'GSAP', progress: 60 },
   { label: 'Git', progress: 100 },
   { label: 'Perforce', progress: 100 },
-  { label: 'GSAP', progress: 60 },
   { label: 'Laravel Blades', progress: 60 },
+  { label: 'NodeJS', progress: 30 },
   { label: 'Wordpress', progress: 60 },
   { label: 'SQL', progress: 90 },
   { label: 'Apache', progress: 70 },
@@ -264,9 +265,11 @@ const devSkillData = [
 const programSkillData = [
   { label: 'Javascript', progress: 100 },
   { label: 'TypeScript', progress: 80 },
+  { label: 'C#', progress: 70 },
   { label: 'PHP', progress: 70 },
   { label: 'Java', progress: 70 },
   { label: 'Python', progress: 30 },
+  { label: 'R', progress: 15 },
 ];
 
 const toolSkillData = [
