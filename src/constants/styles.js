@@ -78,7 +78,7 @@ const colors = {
   
   dark: {
     logo: `${lostwellDark}`,
-    background: "#2a3834",
+    background:"#27302d",
     fontColor: "#fff",
     headerColor: '#fffb70',
     accentColor: '#354742',

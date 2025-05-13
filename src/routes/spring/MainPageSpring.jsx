@@ -17,7 +17,6 @@ const useHeader = (component, theme) => {
       height: `150px`,
       border: `2px solid transparent`,
       backgroundColor: `transparent`,
-      borderRadius: '0%',
     },
     to: [
       {
@@ -25,20 +24,18 @@ const useHeader = (component, theme) => {
         width: `150px`,
         height: `150px`,
         border: `2px solid transparent`,
-        borderRadius: '100%',
       },
       {
         top: `${vhToPixel(23)}`,
         width: '538px',
         height: '280px',
         border: `2px solid ${themeValue(theme, 'wrapperStroke')}`,
-        borderRadius: '0%',
       },
     ],
     onRest: (result, controller) => {
       controller.stop()
       dispatch(setToggleState('enabled'))
-    }
+    },
   });
 
   return [animatedComponent, spring];
@@ -53,16 +50,19 @@ const useContainer = (component, theme) => {
       width: '100%',
       height: '100%',
       border: `7px solid transparent`,
-      borderRadius: '0%',
+      borderRadius: '0vh',
+      transform: 'rotate(0)',
     },
     to: [
       {
         border: `5px solid ${themeValue(theme, 'cardStroke')}`,
-        borderRadius: '100%',
+        borderRadius: '100vh',
+        transform: 'rotate(720deg)',
       },
       {
-        borderRadius: '0%',
         border: `5px solid ${themeValue(theme, 'cardStroke')}`,
+        borderRadius: '2vh',
+        transform: 'rotate(0)',
       },
     ]
   });

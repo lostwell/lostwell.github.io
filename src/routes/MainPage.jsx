@@ -52,7 +52,7 @@ let MainPage = (props) => {
                 stroke={themeValue(theme, 'fontColor')}
                 {...{strokeWidth: 2}}
               />
-              Front-End Developer &amp; Designer
+              Senior Front-End Developer &amp; Designer
             </div>
             <a
               rel="noreferrer"

@@ -37,18 +37,26 @@ const OverviewPage = (props) => {
         <CustomRow theme={props.theme}>
             <Col sm={10} md={6}>
               <InView>
-                <h6>Development Tools & Frameworks</h6>
+                <h6>Programming Languages</h6>
                 <ListGroup className="skill-list">
-                  {devSkillData.map((props) => <ListItem {...props}/>)}
+                  {programSkillData.map((props) => <ListItem {...props}/>)}
+                </ListGroup>
+              </InView>
+              <InView>
+                <h6>Development Tools & Libraries</h6>
+                <ListGroup className="skill-list">
+                  {devToolSkillData.map((props) => <ListItem {...props}/>)}
                 </ListGroup>
               </InView>
             </Col>
             <Col>
               <InView>
-                <h6>Programming Languages</h6>
+                <h6>Development Frameworks</h6>
                 <ListGroup className="skill-list">
-                  {programSkillData.map((props) => <ListItem {...props}/>)}
+                  {devFrameworkSkillData.map((props) => <ListItem {...props}/>)}
                 </ListGroup>
+              </InView>
+              <InView>
                 <h6>Software Tools</h6>
                 <ListGroup className="skill-list">
                   {toolSkillData.map((props) => <ListItem {...props}/>)}
@@ -215,6 +223,14 @@ const CustomRow = styled(Row)`
   & .skill-list {
     margin-bottom: 40px;
     backdrop-filter: ${theme('highlightBackdropBlur')};
+
+    & > :last-child{
+      border-radius: 0 0 10px 10px;
+    }
+
+    & > :first-child{
+      border-radius: 10px 10px 0 0;
+    }
   }
   
   @media (max-width: 1250px) {
@@ -239,36 +255,48 @@ const ListItem = ({label, progress}) => {
   </InView>
 }
 
-const devSkillData = [
+const devToolSkillData = [
   { label: 'HTML', progress: 100 },
   { label: 'CSS', progress: 100 },
   { label: 'Sass', progress: 100 },
-  { label: 'React', progress: 100 },
-  { label: 'Redux', progress: 90 },
-  { label: 'ExtJS', progress: 90 },
-  { label: 'MobX', progress: 90 },
-  { label: 'jQuery', progress: 100 },
   { label: 'Bootstrap', progress: 100 },
-  { label: 'DC/D3 JS', progress: 80 },
-  { label: 'React Spring', progress: 80 },
-  { label: 'GSAP', progress: 60 },
+  { label: 'Tailwind CSS', progress: 85 },
+  { label: 'Material UI', progress: 85 },
+  { label: 'NodeJS', progress: 60 },
+  { label: 'Redux', progress: 90 },
+  { label: 'MobX', progress: 90 },
+  { label: 'D3 JS', progress: 80 },
+  { label: 'jQuery', progress: 100 },
+  { label: 'React Spring', progress: 90 },
+  { label: 'Framer Motion', progress: 90 },
+  { label: 'GSAP', progress: 75 },
   { label: 'Git', progress: 100 },
+  { label: 'Jira', progress: 100 },
   { label: 'Perforce', progress: 100 },
-  { label: 'Laravel Blades', progress: 60 },
-  { label: 'NodeJS', progress: 30 },
   { label: 'Wordpress', progress: 60 },
-  { label: 'SQL', progress: 90 },
-  { label: 'Apache', progress: 70 },
-  { label: 'Linux', progress: 70 },
+  { label: 'Drupal', progress: 60 },
+  { label: 'WebGL', progress: 50 },
+  { label: 'MySQL', progress: 70 },
+  { label: 'Linux', progress: 50 },
+];
+
+const devFrameworkSkillData = [
+  { label: 'React', progress: 100 },
+  { label: 'ExtJS', progress: 90 },
+  { label: 'Vue', progress: 70 },
+  { label: 'Angular', progress: 70 },
+  { label: 'NextJS', progress: 60 },
+  { label: 'Unity', progress: 85 },
+  { label: 'Apache', progress: 40 },
 ];
 
 const programSkillData = [
-  { label: 'Javascript', progress: 100 },
-  { label: 'TypeScript', progress: 80 },
-  { label: 'C#', progress: 70 },
+  { label: 'JavaScript', progress: 100 },
+  { label: 'TypeScript', progress: 90 },
+  { label: 'C#', progress: 85 },
   { label: 'PHP', progress: 70 },
   { label: 'Java', progress: 70 },
-  { label: 'Python', progress: 30 },
+  { label: 'Python', progress: 50 },
   { label: 'R', progress: 15 },
 ];
 
@@ -276,6 +304,10 @@ const toolSkillData = [
   { label: 'Adobe XD', progress: 100 },
   { label: 'Adobe Illustrator', progress: 90 },
   { label: 'Adobe Photoshop', progress: 75 },
+  { label: 'Figma', progress: 90 },
+  { label: 'Canva', progress: 70 },
+  { label: 'Sketch', progress: 70 },
+  { label: 'Zeplin', progress: 70 },
   { label: 'Microsoft Office' },
   { label: 'Google Suite' },
 ];

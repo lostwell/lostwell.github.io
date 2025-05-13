@@ -77,6 +77,12 @@ const ImageContainer = styled.div`
   .hidden{
     display: none;
   }
+
+  transition: 0.2s ease-out;
+
+  &:hover{
+    transform: scale(1.1);
+  }
 `;
 
 const GalleryContainer = styled.div`

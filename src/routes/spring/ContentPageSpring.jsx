@@ -36,13 +36,16 @@ const useFeatured = (component) => {
     from: {
       marginTop: `${vhToPixel(45)}`,
       position: 'relative',
+      transform: 'scale(0)',
     },
     to: [
       {
         marginTop: `${vhToPixel(0)}`,
+        transform: 'scale(1)',
       },
       {
         marginTop: `${vhToPixel(-90)}`,
+        transform: 'scale(0)',
       },
     ]
   });
