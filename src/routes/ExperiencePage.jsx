@@ -74,17 +74,28 @@ const EventView = ({interval, title, subtitle, details}) => {
 
 const eventData = [
   {
-    interval: "March 2022 – Present",
+    interval: "July 2025 – Present",
+    title: "Senior UI Implementation Engineer",
+    subtitle: "BetCloud – Melbourne, Australia",
+    details: [
+      'Oversees and maintains the company’s online betting platforms, systems, and services, ensuring reliability and performance across multiple brands and products.',
+      'Designs, develops, and documents reusable UI components, with a focus on pixel-perfect, responsive, and visually engaging user experiences.',
+      'Troubleshoots and resolves UI rendering issues across browsers and devices, and implements UI animations to enhance user interaction.',
+      'Upholds code quality and consistency by enforcing company coding standards, best practices, and scalable design patterns.',
+      'Mentors and supports colleagues, sharing expertise and providing technical assistance as needed.',
+      'Actively participates in cross-functional brainstorming sessions with leadership and senior staff to drive new features and product enhancements.',
+      'Collaborates with management, developers, designers, and QA to ensure thorough testing, technical support, and product polish.',
+    ]
+  },
+  {
+    interval: "March 2022 – July 2025",
     title: "UI/UX Developer - Senior UI/UX Developer",
     subtitle: "Codev by Zylun Philippines Inc. – Makati City, Philippines",
     details: [
-      'Handles a client’s enterprise network system for supply chain management.',
-      'Develops and maintains web apps built with React, Mobx, and ExtJS.',
-      'Develops and troubleshoots pages, reports, forms, widgets, and dashboards.',
-      'Conceptualizes and implements functional requirements into scalable and reusable project components.', 
-      'Provides test coverage and documentation for new and legacy components.',
-      'Provides support and assistance to fellow colleagues in areas of expertise.',
-      'Collaborates with other teams, departments, and QA for technical support.',
+      'Managed and enhanced a client’s enterprise network system for supply chain management.',
+      'Developed, maintained, and troubleshooted web applications, pages, reports, forms, widgets, and dashboards using React, MobX, and ExtJS.',
+      'Transformed functional requirements into scalable, reusable, and well-documented project components with comprehensive test coverage and documentation.',
+      'Supported and mentored colleagues, and collaborated with cross-functional teams and QA for technical support and project delivery.',
     ]
   },
   {
@@ -92,11 +103,9 @@ const eventData = [
     title: "Front-End Developer",
     subtitle: "Whitecloak Technologies, Inc. – Pasig City, Philippines",
     details: [
-      'Handled a client’s corporate banking and system management web applications.',
-      'Developed and maintained web apps built with React, Redux, and Redux-Saga.',
-      'Developed features for rendering and managing bank documents.',
-      'Troubleshoots project components to comply with responsive web design.',
-      'Coordinated with multiple teams for testing, QA, and troubleshooting of APIs.',
+      'Developed and maintained corporate banking and system management web applications for a client, using React, Redux, and Redux-Saga.',
+      'Implemented features for rendering and managing bank documents, ensuring responsive design and cross-device compatibility.',
+      'Collaborated with multiple teams for testing, QA, and API troubleshooting to ensure robust and reliable application delivery.',
     ]
   },
   {
@@ -104,12 +113,9 @@ const eventData = [
     title: "Web Developer",
     subtitle: "Dottystyle Creative Co. – Makati City, Philippines",
     details: [
-      'Handled a client’s engagement administration and analytics web application.',
-      'Developed and maintained React, Redux, and jQuery-based web apps.',
-      'Interpreted client needs and designed mockups for new pages and features.',
-      'Implemented WordPress, React web sites from concept to deployment.',
-      'Implemented charting libraries for data analytics and visualization features.',
-      'Implemented web animation libraries for developing banners and automated email responses.',
+      'Developed and maintained engagement administration and analytics web applications using React, Redux, jQuery, and WordPress.',
+      'Transformed client requirements into mockups and delivered full-featured websites from concept to deployment.',
+      'Integrated charting and animation libraries for data visualization, banners, and automated email responses.',
     ]
   },
   {
@@ -117,8 +123,7 @@ const eventData = [
     title: "Technical Content Creator (Internship)",
     subtitle: "Nokia Manila Technology Center – Quezon City, Philippines",
     details: [
-      'Created and migrated technical manuals to XML using DITA guidelines.',
-      'Led a small internship team to develop an automated peer evaluation web app.',
+      'Created and migrated technical manuals to XML using DITA guidelines, and led a small team to develop an automated peer evaluation web app.',
     ]
   },
 ];

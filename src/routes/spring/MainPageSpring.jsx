@@ -12,24 +12,20 @@ const useHeader = (component, theme) => {
   const spring = useSpring({
     config: config.slow,
     from: {
-      top: `${vhToPixel(120)}`,
+      top: `150%`,
       width: `150px`,
       height: `150px`,
-      border: `2px solid transparent`,
-      backgroundColor: `transparent`,
     },
     to: [
       {
-        top: `${vhToPixel(33)}`,
+        top: `45%`,
         width: `150px`,
         height: `150px`,
-        border: `2px solid transparent`,
       },
       {
-        top: `${vhToPixel(23)}`,
+        top: `40%`,
         width: '538px',
         height: '280px',
-        border: `2px solid ${themeValue(theme, 'wrapperStroke')}`,
       },
     ],
     onRest: (result, controller) => {
@@ -49,18 +45,15 @@ const useContainer = (component, theme) => {
     from: {
       width: '100%',
       height: '100%',
-      border: `7px solid transparent`,
       borderRadius: '0vh',
       transform: 'rotate(0)',
     },
     to: [
       {
-        border: `5px solid ${themeValue(theme, 'cardStroke')}`,
         borderRadius: '100vh',
         transform: 'rotate(720deg)',
       },
       {
-        border: `5px solid ${themeValue(theme, 'cardStroke')}`,
         borderRadius: '2vh',
         transform: 'rotate(0)',
       },

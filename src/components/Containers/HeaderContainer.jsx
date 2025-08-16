@@ -4,7 +4,6 @@ import { theme } from '../Utils';
 let HeaderContainer = styled.div`
   font-size: 1em;
   background-color: ${theme('highlightFill')};
-  border: 7px solid ${theme('cardStroke')};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,7 +12,7 @@ let HeaderContainer = styled.div`
   z-index: 0;
   overflow: hidden;
   backdrop-filter: ${theme('highlightBackdropBlur')};
-  box-shadow: ${theme('boxShadows')};
+  box-shadow: ${theme('boxShadowContainer')};
 
   .theme-toggle{
     margin: 0 0 0 20px;

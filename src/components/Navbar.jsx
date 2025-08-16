@@ -18,7 +18,14 @@ const NavbarComponent = ({onToggleClick}) => {
       <Container>
         <Navbar.Brand>
           <Home to="/">
-              <Brand theme={theme}>
+              <Brand theme={theme} onClick={e => {
+                const el = e.currentTarget;
+                el.style.animation = 'click 0.4s ease-in-out forwards';
+                el.addEventListener('animationend', function handler() {
+                  el.style.animation = '';
+                  el.removeEventListener('animationend', handler);
+                });
+              }}>
                 <div id='lostwell-text'>Lostwell</div>
                 <Logo id='lostwell-logo'/>
               </Brand>
@@ -72,15 +79,15 @@ const NavbarStyled = styled(Navbar)`
   box-shadow: ${getTheme('boxShadows')};
   border-bottom: 3px solid ${getTheme('cardStroke')};
 
-  /* @media (max-width: 990px){
+  .navbar-toggler {
     background-color: ${getTheme('highlightFill')};
-    backdrop-filter: ${getTheme('highlightBackdropBlur')};
-  } */
+  }
 
-  & .navbar-nav{
-    @media (max-width: 990px){
-      height: 95vh;
+  @media (max-width: 990px){
+    & .navbar-nav{
+      height: 90vh;
       margin-top: 12px;
+      padding: 60px 0;
 
       a {
         height: 10vh;
@@ -94,14 +101,10 @@ const NavbarStyled = styled(Navbar)`
         width: 80px;
         height: 80px;
         font-size: 2em;
-        margin: 40px 0;
+        margin: 20px 0;
         background-color: ${getTheme('highlightFill')};
       }
     }
-  }
-
-  .navbar-toggler {
-    background-color: ${getTheme('highlightFill')};
   }
 `;
 
@@ -116,6 +119,19 @@ const Brand = styled.div`
   line-height: 1.5em;
   color: ${getTheme('fontColor')};
   margin: 5px 50px 0 0;
+  transition: scale 0.25s;
+
+  @keyframes click {
+    0%, 100% {
+      scale: 1;
+    }
+    20% {
+      scale: 0.95;
+    }
+    80% {
+      scale: 1.05;
+    }
+  }
 `;
 
 const LinkWrapper = styled.span`
@@ -124,7 +140,7 @@ const LinkWrapper = styled.span`
   justify-content: center;
   align-items: center;
   font-weight: bold;
-  margin: 0 15px;
+  margin: 4px 15px 2px 15px;
   font-size: 0.8em;
   line-height: 1em;
 `;
@@ -142,13 +158,15 @@ const Controls = styled(Nav)`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: ${getTheme('cardFillOpaque')};
-    backdrop-filter: blur(5px);
-    box-shadow: ${getTheme('boxShadows')};
+    background-color: ${getTheme('highlightFill')};
+    backdrop-filter: blur(20px);
+    box-shadow: ${getTheme('boxShadowContainer')};
+    border-radius: 20px;
   }
 `;
 
 const Route = styled(NavLink)`
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -157,10 +175,40 @@ const Route = styled(NavLink)`
   text-decoration: none;
   color: ${getTheme('fontColor')};
   margin: 0 10px;
+  overflow: hidden;
+  transition: 
+    scale 0.25s,
+    color 0.25s,
+    background-color 0.25s;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background-color: ${getTheme('accentColor')};
+    left: 12px;
+    opacity: 0;
+    border-radius: 10px;
+    transition: opacity 0.25s;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background-color: ${getTheme('accentColor')};
+    right: 12px;
+    opacity: 0;
+    border-radius: 10px;
+    transition: opacity 0.25s;
+  }
 
   &:hover{
-    color: ${getTheme('accentColor')};
-    background-color: ${getTheme('fontColor')};
+    scale: 1.15;
   }
 
   &.active{
@@ -168,10 +216,29 @@ const Route = styled(NavLink)`
       color: ${getTheme('accentColor')};
     }
     background-color: ${getTheme('fontColor')};
+
+    &::before {
+      opacity: 1;
+    }
+
+    &::after {
+      opacity: 1;
+    }
   }
 
   @media (max-width: 990px){
     margin: 20px 0;
+
+    &::before {
+      width: 8px;
+      height: 8px;
+      left: 25%;
+    }
+    &::after {
+      width: 8px;
+      height: 8px;
+      right: 25%;
+    }
   }
 `;
 

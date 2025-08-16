@@ -29,6 +29,7 @@ const ContentPageHeader = styled.div`
     backdrop-filter: ${theme('highlightBackdropBlur')};
     border-radius: 50px;
     padding: 5px 5px 5px 20px;
+    box-shadow: ${theme('boxShadowContainer')};
   }
 
   @media (max-width: 1230px) {

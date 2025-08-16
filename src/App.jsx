@@ -1,4 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
 import {
   HashRouter as Router,
   Switch,
@@ -13,6 +14,7 @@ import { AppContainer } from './components/Containers';
 import { selectTheme, toggleTheme } from './redux/reducers/theme/themeSlice';
 import { selectToggleState, setToggleState } from './redux/reducers/theme/toggleStateSlice';
 import './App.css';
+import { themeValue } from './components/Utils';
 
 function App() {
   const theme = useSelector(selectTheme)
@@ -25,9 +27,15 @@ function App() {
     }
   }
 
+  useEffect(() => {
+    const bg = themeValue(theme, 'background');
+    document.documentElement.style.background = bg;
+    document.body.style.background = bg;
+  }, [theme]);
+
   return (
     <Router>
-      <AppContainer id="app-container">
+      <AppContainer id="app-container" theme={theme}>
         <MainContainer id="main-container" theme={theme}>
           <Particles 
             id="main-particles"

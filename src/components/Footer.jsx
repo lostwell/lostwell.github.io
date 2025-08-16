@@ -89,9 +89,7 @@ const FooterContainer = styled.div`
     border-radius: 20px 20px 0 0;
     backdrop-filter: ${theme('highlightBackdropBlur')};
     background-color: ${theme('highlightFill')};
-    border-top: 3px solid ${theme('cardStroke')};
-    border-left: 3px solid ${theme('cardStroke')};
-    border-right: 3px solid ${theme('cardStroke')};
+    box-shadow: ${theme('boxShadowContainer')};
   }
 
   .footer-details-container{

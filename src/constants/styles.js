@@ -33,26 +33,27 @@ const colors = {
 
     iconFill: '#fffc33',
     iconStroke: '#303030',
-    // cardStroke: '#303030',
     cardStroke: 'transparent',
-    // cardFill: 'rgb(240,252,249, 0.6)',
     cardFill: 'transparent',
     cardFillOpaque: '#effbf8',
     highlightFill: 'rgb(240,252,249, 0.8)',
-    separatorFill: '#303030',
-    // wrapperStroke: 'rgba(48,48,48,1)',
+    separatorFill: 'rgba(0, 0, 0, 0.3)',
     wrapperStroke: 'transparent',
-    // boxShadows: `
-    //   0 1px 1px rgba(128, 193, 177, 0.2),
-    //   0 2px 2px rgba(128, 193, 177, 0.2),
-    //   0 4px 4px rgba(128, 193, 177, 0.2),
-    //   0 8px 8px rgba(128, 193, 177, 0.2),
-    //   0 16px 16px rgba(128, 193, 177, 0.2)
-    // `,
     boxShadows: 'none',
+    boxShadowContainer: `
+      0 0 10px 0 rgba(99, 208, 170, 0.3),
+      inset 0 0 8px 4px rgba(205, 255, 237, 0.8)
+    `,
+    boxShadowContainerSides: `
+      inset 30px 0 30px -30px rgba(205, 255, 237, 0.8),
+      inset -30px 0 30px -30px rgba(205, 255, 237, 0.8)
+    `,
 
     particlesConfig: particlesConfig.light,
     backgroundImage: `url(${dandelionBackground})`,
+    backgroundGradient: `radial-gradient(120% 100% at 50% 80%,
+    rgba(150, 223, 212, 0) 0% 70%,
+    rgba(133, 230, 196, 1) 100%)`,
 
     backgroundPosition: "40% calc(100% + 280px)",
     backgroundSize: "110%",
@@ -92,24 +93,26 @@ const colors = {
     iconFill: '#fffc33',
     iconStroke: '#fffc33',
     cardStroke: 'transparent',
-    // cardFill: 'rgba(100,122,114,0.6)',
     cardFill: 'transparent',
     cardFillOpaque: 'rgba(100,122,114,1)',
-    // highlightFill: 'rgba(160,182,174,0.5)',
     highlightFill: 'rgba(100,122,114,0.6)',
-    separatorFill: '#fff',
+    separatorFill: 'rgba(173, 255, 221, 0.2)',
     wrapperStroke: 'rgba(177,239,223,0)',
-    // boxShadows: `
-    //   0 1px 1px rgba(92, 142, 129, 0.05),
-    //   0 2px 2px rgba(92, 142, 129, 0.05),
-    //   0 4px 4px rgba(92, 142, 129, 0.05),
-    //   0 8px 8px rgba(92, 142, 129, 0.05),
-    //   0 16px 16px rgba(92, 142, 129, 0.05)
-    // `,
     boxShadows: 'none',
+    boxShadowContainer: `
+      0 0 10px 0 rgba(205, 255, 237, 0.3),
+      inset 0 0 20px 0 rgba(138, 234, 194, 0.25)
+    `,
+    boxShadowContainerSides: `
+      inset 30px 0 30px -30px rgba(138, 234, 194, 0.25),
+      inset -30px 0 30px -30px rgba(138, 234, 194, 0.25)
+    `,
 
     particlesConfig: particlesConfig.dark,
     backgroundImage: `url(${cloudBackground})`,
+    backgroundGradient: `radial-gradient(120% 100% at 50% 80%,
+    rgba(138, 234, 194, 0) 0% 70%,
+    rgba(138, 234, 194, 0.1) 100%)`,
 
     backgroundPosition: "40% calc(100% + 280px)",
     backgroundSize: "110%",

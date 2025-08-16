@@ -91,9 +91,9 @@ const Profile = (props) => {
 const StyledProfileWrapper = styled.div`
   width: fit-content;
   height: fit-content;
-  border: 5px solid ${theme('cardStroke')};
   background-color: ${theme('highlightFill')};
-    backdrop-filter: ${theme('highlightBackdropBlur')};
+  backdrop-filter: ${theme('highlightBackdropBlur')};
+  box-shadow: ${theme('boxShadowContainer')};
   border-radius: 10px;
   padding: 20px;
   margin: 0 20px auto auto;
@@ -197,7 +197,7 @@ const CustomRow = styled(Row)`
   & .list-group-item{
     border: none;
     color: ${theme('fontColor')};
-    background-color: ${theme('highlightFill')};
+    background-color: transparent;
     padding: 15px 20px;
   }
 
@@ -222,15 +222,12 @@ const CustomRow = styled(Row)`
 
   & .skill-list {
     margin-bottom: 40px;
+    padding: 10px 10px;
     backdrop-filter: ${theme('highlightBackdropBlur')};
-
-    & > :last-child{
-      border-radius: 0 0 10px 10px;
-    }
-
-    & > :first-child{
-      border-radius: 10px 10px 0 0;
-    }
+    background-color: ${theme('highlightFill')};
+    box-shadow: ${theme('boxShadowContainer')};
+    overflow: hidden;
+    border-radius: 10px;
   }
   
   @media (max-width: 1250px) {

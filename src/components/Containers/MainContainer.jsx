@@ -9,7 +9,6 @@ let MainContainer = styled.div`
   position: absolute;
   z-index: 0;
   
-  background-color: ${theme('background')};
   background-image: ${theme('backgroundImage')};
   background-position: ${theme('backgroundPosition')};
   background-size: ${theme('backgroundSize')};

@@ -22,7 +22,7 @@ let ContentPage = (props) => {
   const [AnimatedContent, contentSpring] = useContent(ContentContainer, theme);
 
   return (
-    <PageContainer id="page-container">
+    <PageContainer id="page-container" theme={theme}>
       <AnimatedWrapper theme={theme} style={headerSpring}>
         <PageContentContainer theme={theme}>
           <AnimatedFeatured style={featuredSpring} featured={props.feature} />

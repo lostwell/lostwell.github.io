@@ -62,6 +62,7 @@ const ContentContainer = styled(Row)`
     padding: 40px 40px;
     background-color: ${theme('highlightFill')};
     backdrop-filter: ${theme('highlightBackdropBlur')};
+    box-shadow: ${theme('boxShadowContainer')};
   }
 `;
 

@@ -3,7 +3,9 @@ import media from './media/HeaderWrapperMedia';
 
 let HeaderWrapper = styled.div`
   position: fixed;
-  top: 20%;
+  top: 40%;
+  left: 50%;
+  translate: -50% -50%;
   display: flex;
   padding: 5px;
 `;

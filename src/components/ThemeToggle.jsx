@@ -25,7 +25,10 @@ const ThemeToggle = (props) => {
         animate({
           config: {...slow},
           from: { rotate: 0, scale: 0.3 },
-          to: { rotate: 720, scale: 1 },
+          to: [
+            { rotate: 720, scale: 1.5 },
+            { rotate: 0, scale: 1 },
+          ],
         })
       }
       props.onClick()

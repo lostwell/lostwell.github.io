@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { theme } from '../Utils';
 
 let AppContainer = styled.div`
   width: 100%;
@@ -7,7 +8,8 @@ let AppContainer = styled.div`
   position: absolute;
   z-index: 0;
   
-  background-color: 'transparent';
+  background-color: ${theme('background')};
+  background-image: ${theme('backgroundGradient')};
 
   display: flex;
   flex-direction: column;

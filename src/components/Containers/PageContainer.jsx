@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { theme } from '../Utils';
 
 let PageContainer = styled.div`
   width: 100%;
@@ -12,6 +13,9 @@ let PageContainer = styled.div`
   z-index: 0;
   overflow: hidden auto;
   top: 80px;
+
+  scrollbar-color: ${theme('iconFill')} transparent;
+  scrollbar-width: thin;
 `;
 
 export default PageContainer;

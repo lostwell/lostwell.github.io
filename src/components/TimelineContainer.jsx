@@ -9,6 +9,7 @@ const TimelineContainer = styled.div`
   background-color: ${theme('highlightFill')};
   backdrop-filter: ${theme('highlightBackdropBlur')};
   margin-top: 30px;
+  box-shadow: ${theme('boxShadowContainer')};
 
   & .details{
     margin-left: 20px;
