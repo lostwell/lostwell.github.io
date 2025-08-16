@@ -41,12 +41,8 @@ const colors = {
     wrapperStroke: 'transparent',
     boxShadows: 'none',
     boxShadowContainer: `
-      0 0 10px 0 rgba(99, 208, 170, 0.3),
-      inset 0 0 8px 4px rgba(205, 255, 237, 0.8)
-    `,
-    boxShadowContainerSides: `
-      inset 30px 0 30px -30px rgba(205, 255, 237, 0.8),
-      inset -30px 0 30px -30px rgba(205, 255, 237, 0.8)
+      0 0 12px 1px rgba(99, 208, 170, 0.3),
+      inset 0 0 8px 4px rgba(205, 255, 237, 1)
     `,
 
     particlesConfig: particlesConfig.light,
@@ -54,6 +50,8 @@ const colors = {
     backgroundGradient: `radial-gradient(120% 100% at 50% 80%,
     rgba(150, 223, 212, 0) 0% 70%,
     rgba(133, 230, 196, 1) 100%)`,
+    
+    scrollbarColor: '#fbe771',
 
     backgroundPosition: "40% calc(100% + 280px)",
     backgroundSize: "110%",
@@ -103,16 +101,14 @@ const colors = {
       0 0 10px 0 rgba(205, 255, 237, 0.3),
       inset 0 0 20px 0 rgba(138, 234, 194, 0.25)
     `,
-    boxShadowContainerSides: `
-      inset 30px 0 30px -30px rgba(138, 234, 194, 0.25),
-      inset -30px 0 30px -30px rgba(138, 234, 194, 0.25)
-    `,
 
     particlesConfig: particlesConfig.dark,
     backgroundImage: `url(${cloudBackground})`,
     backgroundGradient: `radial-gradient(120% 100% at 50% 80%,
-    rgba(138, 234, 194, 0) 0% 70%,
+    rgba(138, 234, 194, 0) 0% 65%,
     rgba(138, 234, 194, 0.1) 100%)`,
+
+    scrollbarColor: '#fffc33',
 
     backgroundPosition: "40% calc(100% + 280px)",
     backgroundSize: "110%",

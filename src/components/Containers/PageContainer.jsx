@@ -14,7 +14,7 @@ let PageContainer = styled.div`
   overflow: hidden auto;
   top: 80px;
 
-  scrollbar-color: ${theme('iconFill')} transparent;
+  scrollbar-color: ${theme('scrollbarColor')} transparent;
   scrollbar-width: thin;
 `;
 
