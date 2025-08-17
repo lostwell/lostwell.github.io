@@ -16,15 +16,13 @@ const ExperiencePage = (props) => {
           <InView><h2>Work Experience</h2></InView>
           <InView><h3>Louel Lagasca</h3></InView>
         </CustomPageHeader>
-        <InView>
-          <TimelineContainer theme={props.theme}>
-            <InView>
-              <Timeline>
-                {eventData.map((props) => <EventView {...props} />)}
-              </Timeline>
-            </InView>
-          </TimelineContainer>
-        </InView>
+        <TimelineContainer theme={props.theme}>
+          <InView>
+            <Timeline>
+              {eventData.map((props) => <EventView {...props} />)}
+            </Timeline>
+          </InView>
+        </TimelineContainer>
       </CustomContainer>
     </ContentPage>
   );
@@ -56,6 +54,25 @@ const CustomContainer= styled(Container)`
 const CustomPageHeader = styled(ContentPageHeader)`
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 560px) {
+    margin-bottom: 40px;
+    & h2 {
+      font-size: 2.5em;
+    }
+  }
+
+  @media (max-width: 380px) {
+    & h2 {
+      font-size: 2.2em;
+    }
+  }
+
+  @media (max-width: 340px) {
+    & h2 {
+      font-size: 2em;
+    }
+  }
 `;
 
 const EventView = ({interval, title, subtitle, details}) => {

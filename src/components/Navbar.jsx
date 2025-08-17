@@ -102,7 +102,8 @@ const NavbarStyled = styled(Navbar)`
         height: 80px;
         font-size: 2em;
         margin: 20px 0;
-        background-color: ${getTheme('highlightFill')};
+        background-color: ${getTheme('routeMobileFill')};
+        box-shadow: ${getTheme('routeMobileShadow')};
       }
     }
   }
@@ -139,21 +140,23 @@ const LinkWrapper = styled.span`
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   font-weight: bold;
-  margin: 4px 15px 2px 15px;
+  margin: 4px 12px 2px 12px;
   font-size: 0.8em;
   line-height: 1em;
 `;
 
 const Controls = styled(Nav)`
-  width: 100%;
+  width: fit-content;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
-  margin: 5px 0 0 0;
+  margin: 5px 0 auto auto;
 
   @media (max-width: 990px){
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -179,32 +182,40 @@ const Route = styled(NavLink)`
   transition: 
     scale 0.25s,
     color 0.25s,
-    background-color 0.25s;
+    background-color 0.25s,
+    box-shadow 0.25s,
+    backdrop-filter 0.25s;
 
-  &::before {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 4px;
-    height: 4px;
-    background-color: ${getTheme('accentColor')};
-    left: 12px;
-    opacity: 0;
-    border-radius: 10px;
-    transition: opacity 0.25s;
-  }
+  span {
+    position: relative;
 
-  &::after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 4px;
-    height: 4px;
-    background-color: ${getTheme('accentColor')};
-    right: 12px;
-    opacity: 0;
-    border-radius: 10px;
-    transition: opacity 0.25s;
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background-color: ${getTheme('fontColor')};
+      margin-top: -2px;
+      left: -10px;
+      opacity: 0;
+      border-radius: 10px;
+      transition: opacity 0.25s;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background-color: ${getTheme('fontColor')};
+      margin-top: -2px;
+      right: -10px;
+      opacity: 0;
+      border-radius: 10px;
+      transition: opacity 0.25s;
+    }
   }
 
   &:hover{
@@ -212,32 +223,46 @@ const Route = styled(NavLink)`
   }
 
   &.active{
+    background-color: ${getTheme('highlightFill')};
+    box-shadow: ${getTheme('boxShadowContainer')};
+    backdrop-filter: blur(5px);
+
     & span{
-      color: ${getTheme('accentColor')};
+      color: ${getTheme('fontColor')};
     }
-    background-color: ${getTheme('fontColor')};
+    
+    span {
+      &::before {
+        opacity: 1;
+      }
 
-    &::before {
-      opacity: 1;
-    }
-
-    &::after {
-      opacity: 1;
+      &::after {
+        opacity: 1;
+      }
     }
   }
 
   @media (max-width: 990px){
     margin: 20px 0;
 
-    &::before {
-      width: 8px;
-      height: 8px;
-      left: 25%;
+    &.active{
+      background-color: ${getTheme('routeMobileFill')};
+      box-shadow: ${getTheme('routeMobileShadow')};
     }
-    &::after {
-      width: 8px;
-      height: 8px;
-      right: 25%;
+
+    span {
+      &::before {
+        width: 8px;
+        height: 8px;
+        margin-top: -5px;
+        left: -50px;
+      }
+      &::after {
+        width: 8px;
+        height: 8px;
+        margin-top: -5px;
+        right: -50px;
+      }
     }
   }
 `;

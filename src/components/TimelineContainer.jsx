@@ -29,11 +29,16 @@ const TimelineContainer = styled.div`
   label {
     background-color: ${theme('accentColor')};
     outline: 5px solid ${theme('fontColor')};
+    border-radius: 20px;
+    width: 1.25em;
+    height: 1.25em;
+    left: 1.9em;
   }
 
   p {
     background-color: ${theme('headerColor')};
     color: ${theme('accentColor')};
+    border-radius: 20px;
     margin-bottom: 40px;
     font-size: 1em;
     font-family: 'Staatlitches';
@@ -45,6 +50,8 @@ const TimelineContainer = styled.div`
   
   div > ul::before{
     background-color: ${theme('fontColor')};
+    border-radius: 5px;
+    top: 5px;
   }
 
   h3 {

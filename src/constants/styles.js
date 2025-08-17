@@ -1,6 +1,8 @@
 import particlesConfig from "./particles";
 
 import dandelionBackground from '../resources/images/background/dandelion-bg.png';
+import skyTexture from '../resources/images/background/sky-texture-min.jpg';
+import galaxyTexture from '../resources/images/background/galaxy-texture-min.jpg';
 import cloudBackground from '../resources/images/background/cloud-bg.png';
 
 import lostwellLight from '../resources/images/icon/lostwell-light.svg';
@@ -47,10 +49,24 @@ const colors = {
 
     particlesConfig: particlesConfig.light,
     backgroundImage: `url(${dandelionBackground})`,
-    backgroundGradient: `radial-gradient(120% 100% at 50% 80%,
-    rgba(150, 223, 212, 0) 0% 70%,
-    rgba(133, 230, 196, 1) 100%)`,
+    backgroundTexture: `url(${skyTexture})`,
+    backgroundTextureFilter: 'hue-rotate(-40deg) brightness(1.05) contrast(1) blur(4px)',
+    backgroundTextureOpacity: '0.4',
+    backgroundGradient: `radial-gradient(150% 100% at 50% 90%,
+    rgba(150, 223, 212, 0) 0% 60%,
+    rgba(155, 255, 220, 1) 100%)`,
+
+    backgroundOpacity: '0.7',
+    backgroundFilter: 'drop-shadow(0 0 15px rgba(99, 208, 170, 0.5)) blur(1px)',
+    galleryOverlayFill: 'rgba(54, 146, 115, 1)',
+    routeMobileFill: 'rgba(183, 245, 224, 0.6)',
+    routeMobileShadow:`
+      0 0 12px 1px rgba(99, 208, 170, 0.3),
+      inset 0 0 8px 4px rgba(205, 255, 237, 1)
+    `,
     
+    featureFilter: 'drop-shadow(0 0 15px rgba(99, 208, 170, 0.5))',
+
     scrollbarColor: '#fbe771',
 
     backgroundPosition: "40% calc(100% + 280px)",
@@ -93,7 +109,7 @@ const colors = {
     cardStroke: 'transparent',
     cardFill: 'transparent',
     cardFillOpaque: 'rgba(100,122,114,1)',
-    highlightFill: 'rgba(100,122,114,0.6)',
+    highlightFill: 'rgba(87, 110, 101, 0.8)',
     separatorFill: 'rgba(173, 255, 221, 0.2)',
     wrapperStroke: 'rgba(177,239,223,0)',
     boxShadows: 'none',
@@ -104,9 +120,23 @@ const colors = {
 
     particlesConfig: particlesConfig.dark,
     backgroundImage: `url(${cloudBackground})`,
+    backgroundTexture: `url(${galaxyTexture})`,
+    backgroundTextureFilter: 'grayscale(0) hue-rotate(-30deg) brightness(2) contrast(0.8) blur(20px)',
+    backgroundTextureOpacity: '0.3',
     backgroundGradient: `radial-gradient(120% 100% at 50% 80%,
-    rgba(138, 234, 194, 0) 0% 65%,
+    rgba(138, 234, 194, 0) 0% 60%,
     rgba(138, 234, 194, 0.1) 100%)`,
+
+    backgroundOpacity: '0.75',
+    backgroundFilter: 'drop-shadow(0 0 15px rgba(205, 255, 237, 0.15)) blur(3px)',
+    galleryOverlayFill: 'rgba(24, 113, 81, 1)',
+    routeMobileFill: 'rgba(191, 251, 231, 0.2)',
+    routeMobileShadow:`
+      0 0 10px 0 rgba(205, 255, 237, 0.3),
+      inset 0 0 20px 0 rgba(138, 234, 194, 0.25)
+    `,
+
+    featureFilter: 'drop-shadow(0 0 15px rgba(205, 255, 237, 0.15))',
 
     scrollbarColor: '#fffc33',
 

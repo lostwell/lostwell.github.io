@@ -57,7 +57,7 @@ export default Gallery;
 const ImageComponent = (props) => {
   const [hasLoaded, setHasLoaded] = useState(false);
 
-  return <ImageContainer>
+  return <ImageContainer className='image-container'>
     <InView className="inView">
       { !hasLoaded && <Spinner animation="border" />}
       <img alt={props.imageProps.alt} className={hasLoaded? '' : 'hidden'} {...props.imageProps} onLoad={() => setHasLoaded(true)}/>
@@ -72,6 +72,7 @@ const ImageContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
   }
 
   .hidden{
@@ -81,11 +82,48 @@ const ImageContainer = styled.div`
   transition: 0.2s ease-out;
 
   &:hover{
-    transform: scale(1.1);
+    transform: scale(1.15);
   }
 `;
 
 const GalleryContainer = styled.div`
+  .image-container {
+    img {
+      transition: filter 0.25s;
+      filter: grayscale(1);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: ${theme('galleryOverlayFill')};
+      mix-blend-mode: screen;
+      opacity: 0.35;
+      pointer-events: none;
+      transition: opacity 0.25s;
+    }
+
+    &:hover {
+      &::after {
+        opacity: 0;
+      }
+      img {
+        filter: grayscale(0);
+      }
+    }
+
+    @media (max-width: 991px) and (hover: none) and (pointer: coarse) {
+      img {
+        filter: grayscale(0);
+      }
+
+      &::after {
+        opacity: 0.2;
+      }
+    }
+  }
+
   .ReactGridGallery_tile {
     background-color: ${theme('imageFill')} !important;
     border-radius: 10px;

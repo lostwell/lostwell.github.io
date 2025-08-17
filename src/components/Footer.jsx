@@ -85,7 +85,7 @@ const FooterContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 40px 30px;
+    padding: 40px 20px;
     border-radius: 20px 20px 0 0;
     backdrop-filter: ${theme('highlightBackdropBlur')};
     background-color: ${theme('highlightFill')};
@@ -121,6 +121,11 @@ const FooterContainer = styled.div`
 
   @media (max-width: 500px) {
     padding: 30px 10px;
+    padding-bottom: 0;
+  }
+
+  @media (max-width: 425px) {
+    padding: 30px 0;
     padding-bottom: 0;
   }
 `;

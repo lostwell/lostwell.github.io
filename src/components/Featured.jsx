@@ -25,8 +25,10 @@ const StyledFeatured = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  filter: ${theme('featureFilter')};
   display: block;
   position: relative;
+  opacity: 0.95;
 
   @media (max-width: 1024px) {
     top: 20px;

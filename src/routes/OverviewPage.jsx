@@ -38,30 +38,38 @@ const OverviewPage = (props) => {
             <Col sm={10} md={6}>
               <InView>
                 <h6>Programming Languages</h6>
-                <ListGroup className="skill-list">
-                  {programSkillData.map((props) => <ListItem {...props}/>)}
-                </ListGroup>
               </InView>
+              <ListGroup className="skill-list">
+                <InView>
+                  {programSkillData.map((props) => <ListItem {...props}/>)}
+                </InView>
+              </ListGroup>
               <InView>
                 <h6>Development Tools & Libraries</h6>
-                <ListGroup className="skill-list">
-                  {devToolSkillData.map((props) => <ListItem {...props}/>)}
-                </ListGroup>
               </InView>
+              <ListGroup className="skill-list">
+                <InView>
+                  {devToolSkillData.map((props) => <ListItem {...props}/>)}
+                </InView>
+              </ListGroup>
             </Col>
             <Col>
               <InView>
                 <h6>Development Frameworks</h6>
-                <ListGroup className="skill-list">
-                  {devFrameworkSkillData.map((props) => <ListItem {...props}/>)}
-                </ListGroup>
               </InView>
+              <ListGroup className="skill-list">
+                <InView>
+                    {devFrameworkSkillData.map((props) => <ListItem {...props}/>)}
+                </InView>
+              </ListGroup>
               <InView>
                 <h6>Software Tools</h6>
-                <ListGroup className="skill-list">
-                  {toolSkillData.map((props) => <ListItem {...props}/>)}
-                </ListGroup>
               </InView>
+              <ListGroup className="skill-list">
+                <InView>
+                {toolSkillData.map((props) => <ListItem {...props}/>)}
+                </InView>
+              </ListGroup>
             </Col>
         </CustomRow>
       </ContentContainer>
@@ -104,7 +112,6 @@ const StyledProfileWrapper = styled.div`
 
   @media (max-width: 1230px) {
     padding: 15px;
-    margin: 0 auto;
   }
 
   @media (max-width: 1000px) {
@@ -223,7 +230,7 @@ const CustomRow = styled(Row)`
   & .skill-list {
     margin-bottom: 40px;
     padding: 10px 10px;
-    backdrop-filter: ${theme('highlightBackdropBlur')};
+    backdrop-filter: ${theme('highlightBackdropBlur')} !important;
     background-color: ${theme('highlightFill')};
     box-shadow: ${theme('boxShadowContainer')};
     overflow: hidden;

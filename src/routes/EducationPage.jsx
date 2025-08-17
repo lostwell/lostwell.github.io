@@ -57,6 +57,10 @@ const ContentContainer = styled(Row)`
     padding: 0 20px;
   }
 
+  @media (max-width: 425px) {
+    padding: 0;
+  }
+
   .gallery-container{
     border-radius: 20px;
     padding: 40px 40px;
@@ -100,6 +104,36 @@ const CustomContainer = styled(Container)`
 const CustomPageHeader = styled(ContentPageHeader)`
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 560px) {
+    margin-bottom: 40px;
+    & h2 {
+      font-size: 2.2em;
+    }
+    & h3 {
+      font-size: 0.8em;
+    }
+  }
+
+  @media (max-width: 380px) {
+    & h2 {
+      font-size: 2em;
+    }
+    & h3 {
+      font-size: 0.7em;
+      letter-spacing: 10px;
+    }
+  }
+
+  @media (max-width: 340px) {
+    & h2 {
+      font-size: 1.8em;
+    }
+    & h3 {
+      font-size: 0.7em;
+      letter-spacing: 8px;
+    }
+  }
 `;
 
 const EventView = ({interval, title, subtitle, details}) => {
